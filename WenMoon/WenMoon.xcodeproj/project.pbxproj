@@ -1,0 +1,2093 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19338EEB2D75DE8900E5AA89 /* AppleSignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19338EEA2D75DE8900E5AA89 /* AppleSignInService.swift */; };
+		19338EED2D75EE4900E5AA89 /* AppleSignInServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19338EEC2D75EE4900E5AA89 /* AppleSignInServiceMock.swift */; };
+		19338EF12D7A11A000E5AA89 /* PriceAlertStateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19338EF02D7A11A000E5AA89 /* PriceAlertStateRequest.swift */; };
+		194212A52D5A4930008DE753 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194212A42D5A4930008DE753 /* String+Extensions.swift */; };
+		194212A72D5BB250008DE753 /* LinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194212A62D5BB250008DE753 /* LinksView.swift */; };
+		194212A92D5D0D37008DE753 /* ExpandableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194212A82D5D0D37008DE753 /* ExpandableTextView.swift */; };
+		194212AC2D5D13E1008DE753 /* CoinMarketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194212AB2D5D13E1008DE753 /* CoinMarketsView.swift */; };
+		194212AF2D5E0999008DE753 /* CoinMarketsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194212AE2D5E0999008DE753 /* CoinMarketsViewModel.swift */; };
+		194212B12D5E1635008DE753 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194212B02D5E1635008DE753 /* View+Extensions.swift */; };
+		194212B42D5FB381008DE753 /* CoinDetails+MarketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194212B32D5FB381008DE753 /* CoinDetails+MarketData.swift */; };
+		194212B62D5FB3C5008DE753 /* CoinDetails+Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194212B52D5FB3C5008DE753 /* CoinDetails+Links.swift */; };
+		194212B82D5FB3E2008DE753 /* CoinDetails+Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194212B72D5FB3E2008DE753 /* CoinDetails+Ticker.swift */; };
+		194212BA2D5FBAE1008DE753 /* CoinMarketsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194212B92D5FBAE1008DE753 /* CoinMarketsViewModelTests.swift */; };
+		1950C8A52D737B0000595401 /* NewsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1950C8A42D737B0000595401 /* NewsServiceTests.swift */; };
+		1950C8A82D737B2100595401 /* NewsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1950C8A72D737B2100595401 /* NewsViewModelTests.swift */; };
+		1950C8AA2D737B2F00595401 /* NewsServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1950C8A92D737B2F00595401 /* NewsServiceMock.swift */; };
+		1950C8AE2D737C5600595401 /* NewsFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1950C8AD2D737C5600595401 /* NewsFactoryMock.swift */; };
+		195C1E082E2015F400ACB15E /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 195C1E072E2015F400ACB15E /* Release.xcconfig */; };
+		195C1E092E2015F400ACB15E /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 195C1E072E2015F400ACB15E /* Release.xcconfig */; };
+		195C1E0E2E20160500ACB15E /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 195C1E0D2E20160500ACB15E /* Debug.xcconfig */; };
+		195C1E0F2E20160500ACB15E /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 195C1E0D2E20160500ACB15E /* Debug.xcconfig */; };
+		1961B51F2D34407600D0CEBC /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1961B51E2D34407600D0CEBC /* PlaceholderView.swift */; };
+		1961B5242D37C04600D0CEBC /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1961B5232D37C04600D0CEBC /* ContentViewModel.swift */; };
+		1961B5262D37C1C600D0CEBC /* ContentViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1961B5252D37C1C600D0CEBC /* ContentViewModelTests.swift */; };
+		196CE7712D552B6B0084712E /* CoinDetailsFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196CE7702D552B6B0084712E /* CoinDetailsFactoryMock.swift */; };
+		1975ED872DC8E6B300FCABB7 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975ED862DC8E6B300FCABB7 /* LottieView.swift */; };
+		1975ED8A2DC8E6E100FCABB7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1975ED892DC8E6E100FCABB7 /* Lottie */; };
+		1975ED8C2DC8E94200FCABB7 /* paywallAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 1975ED8B2DC8E94200FCABB7 /* paywallAnimation.json */; };
+		198655062D30394F00216097 /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198655052D30394F00216097 /* CoinImageView.swift */; };
+		198655092D32DD6200216097 /* PortfolioFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198655082D32DD6200216097 /* PortfolioFactoryMock.swift */; };
+		198655102D32E08D00216097 /* AddTransactionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1986550F2D32E08D00216097 /* AddTransactionViewModelTests.swift */; };
+		198655122D32E4A700216097 /* PortfolioViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198655112D32E4A700216097 /* PortfolioViewModelTests.swift */; };
+		1986D1792D722F7F0044A05F /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1986D1782D722F7F0044A05F /* NewsService.swift */; };
+		1986D17C2D722FA80044A05F /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1986D17B2D722FA80044A05F /* News.swift */; };
+		199266B12D7308FC0069357E /* AllNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199266B02D7308FC0069357E /* AllNews.swift */; };
+		199266B32D7313260069357E /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199266B22D7313260069357E /* SafariView.swift */; };
+		199545FD2D9AA59C00FF4500 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 199545FC2D9AA59C00FF4500 /* GoogleService-Info.plist */; };
+		199545FE2D9AA59C00FF4500 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 199545FC2D9AA59C00FF4500 /* GoogleService-Info.plist */; };
+		199546022D9AB2C600FF4500 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 199546012D9AB2C600FF4500 /* FirebaseAuth */; };
+		199546042D9AB2C600FF4500 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 199546032D9AB2C600FF4500 /* FirebaseCrashlytics */; };
+		199546062D9AD3D200FF4500 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199546052D9AD3D200FF4500 /* UIDevice+Extensions.swift */; };
+		1995460A2D9C255C00FF4500 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199546092D9C255C00FF4500 /* PrimaryButton.swift */; };
+		199546102D9DA98700FF4500 /* NeonBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1995460F2D9DA98700FF4500 /* NeonBackgroundView.swift */; };
+		199546122D9F26E400FF4500 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199546112D9F26E400FF4500 /* MailView.swift */; };
+		199546142D9FCF3000FF4500 /* IdentifiableURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199546132D9FCF3000FF4500 /* IdentifiableURL.swift */; };
+		199626372D89BD0C004073B8 /* AuthStateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199626362D89BD0C004073B8 /* AuthStateProvider.swift */; };
+		1996263A2D89BDB9004073B8 /* WatchlistService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199626392D89BDB9004073B8 /* WatchlistService.swift */; };
+		1996263C2D89BDF6004073B8 /* AnonymousSignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1996263B2D89BDF6004073B8 /* AnonymousSignInService.swift */; };
+		1996263F2D89BF53004073B8 /* GlobalMarketDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1996263E2D89BF53004073B8 /* GlobalMarketDataService.swift */; };
+		199626442D89C114004073B8 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199626432D89C114004073B8 /* AuthViewModel.swift */; };
+		199626462D89C11B004073B8 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199626452D89C11B004073B8 /* AuthView.swift */; };
+		199626482D89CA7D004073B8 /* AuthOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199626472D89CA7D004073B8 /* AuthOptionsView.swift */; };
+		1996264B2D89CE65004073B8 /* ViewDidLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1996264A2D89CE65004073B8 /* ViewDidLoadModifier.swift */; };
+		1996264E2D89FDC3004073B8 /* Watchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1996264D2D89FDC3004073B8 /* Watchlist.swift */; };
+		199626502D8AB5C3004073B8 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1996264F2D8AB5C3004073B8 /* CustomProgressView.swift */; };
+		199626522D8ACB3E004073B8 /* GlobalMarketDataServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199626512D8ACB3E004073B8 /* GlobalMarketDataServiceMock.swift */; };
+		199626542D8ACC6E004073B8 /* GlobalMarketDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199626532D8ACC6E004073B8 /* GlobalMarketDataServiceTests.swift */; };
+		199626562D8ACE34004073B8 /* AuthStateProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199626552D8ACE34004073B8 /* AuthStateProviderMock.swift */; };
+		199626582D8AD348004073B8 /* AuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199626572D8AD348004073B8 /* AuthViewModelTests.swift */; };
+		1996265A2D8AD3C7004073B8 /* AnonymousSignInServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199626592D8AD3C7004073B8 /* AnonymousSignInServiceMock.swift */; };
+		1996265C2D8ADB2A004073B8 /* WatchlistServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1996265B2D8ADB2A004073B8 /* WatchlistServiceMock.swift */; };
+		1996265E2D8B5FCA004073B8 /* WatchlistServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1996265D2D8B5FCA004073B8 /* WatchlistServiceTests.swift */; };
+		19A28BA92D6662E400753251 /* FearAndGreedIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A28BA82D6662E400753251 /* FearAndGreedIndex.swift */; };
+		19AF13032D53C37B00FDCD90 /* CoinDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF13022D53C37B00FDCD90 /* CoinDetails.swift */; };
+		19C0FB142D8196AC000CF3AB /* NotificationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0FB132D8196AC000CF3AB /* NotificationProvider.swift */; };
+		19C0FB162D81B19D000CF3AB /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0FB152D81B19D000CF3AB /* Data+Extensions.swift */; };
+		19D8915C2D999B90000BDAF4 /* PurchasesProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D8915B2D999B90000BDAF4 /* PurchasesProviderMock.swift */; };
+		19DD6E252D8C955800973524 /* PortfolioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DD6E242D8C955800973524 /* PortfolioService.swift */; };
+		19DD6E282D8D6AC700973524 /* PortfolioServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DD6E272D8D6AC700973524 /* PortfolioServiceTests.swift */; };
+		19DD6E2A2D8D6C7E00973524 /* PortfolioServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DD6E292D8D6C7E00973524 /* PortfolioServiceMock.swift */; };
+		19DD6E2C2D8DA2C900973524 /* NotificationProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DD6E2B2D8DA2C900973524 /* NotificationProviderMock.swift */; };
+		19E5C4302D8F4962003C52DB /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 19E5C42F2D8F4962003C52DB /* RevenueCat */; };
+		19E5C4322D8F4962003C52DB /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = 19E5C4312D8F4962003C52DB /* RevenueCatUI */; };
+		19E5C4352D8F49A2003C52DB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E5C4342D8F49A2003C52DB /* StoreKit.framework */; };
+		19E5C43B2D909842003C52DB /* PurchasesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5C43A2D909842003C52DB /* PurchasesProvider.swift */; };
+		19E5C43E2D916609003C52DB /* ProPaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5C43D2D916609003C52DB /* ProPaywallView.swift */; };
+		19E5C4422D916A23003C52DB /* ProPaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5C4412D916A23003C52DB /* ProPaywallViewModel.swift */; };
+		19F254ED2D68E7FF001867CC /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F254EC2D68E7FF001867CC /* AccountService.swift */; };
+		19F254EF2D69074C001867CC /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F254EE2D69074C001867CC /* AuthError.swift */; };
+		19F254F52D69EFF5001867CC /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F254F42D69EFF5001867CC /* Account.swift */; };
+		19F254F92D69F783001867CC /* AccountServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F254F82D69F783001867CC /* AccountServiceMock.swift */; };
+		19F254FC2D6A28BF001867CC /* AccountFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F254FB2D6A28BF001867CC /* AccountFactoryMock.swift */; };
+		19F255032D6A2B79001867CC /* AccountServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F255022D6A2B79001867CC /* AccountServiceTests.swift */; };
+		19FC947A2D74ADE10084DC24 /* SafeURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC94792D74ADE10084DC24 /* SafeURL.swift */; };
+		D21A57BE2CCA65AB00AC2D13 /* MarketData+Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21A57BD2CCA65AB00AC2D13 /* MarketData+Assertions.swift */; };
+		D21A57C12CCAA8BC00AC2D13 /* ErrorFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21A57C02CCAA8BC00AC2D13 /* ErrorFactoryMock.swift */; };
+		D21A57C32CCAAB9400AC2D13 /* Error+Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21A57C22CCAAB9400AC2D13 /* Error+Assertions.swift */; };
+		D220D71F2CEC8BD4004C8EAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D220D71E2CEC8BD4004C8EAB /* ContentView.swift */; };
+		D220D72C2CEC97A3004C8EAB /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = D220D72B2CEC97A3004C8EAB /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		D220D7352CEC99D2004C8EAB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D220D7342CEC99D2004C8EAB /* SettingsView.swift */; };
+		D220D7372CEC99DA004C8EAB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D220D7362CEC99DA004C8EAB /* SettingsViewModel.swift */; };
+		D220D73D2CECA702004C8EAB /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D220D73C2CECA702004C8EAB /* GoogleSignInSwift */; };
+		D220D73F2CECEBF4004C8EAB /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D220D73E2CECEBF4004C8EAB /* GoogleSignInSwift */; };
+		D220D7472CECF7AB004C8EAB /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = D220D7462CECF7AB004C8EAB /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		D220D7492CECF7AB004C8EAB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D220D7482CECF7AB004C8EAB /* FirebaseAuth */; };
+		D220D74B2CECFF16004C8EAB /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D220D74A2CECFF16004C8EAB /* UIApplication+Extensions.swift */; };
+		D220D74D2CED04B6004C8EAB /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D220D74C2CED04B6004C8EAB /* BaseView.swift */; };
+		D220D7552CF0B47F004C8EAB /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D220D7542CF0B47F004C8EAB /* SelectionView.swift */; };
+		D220D75B2CF4DC2C004C8EAB /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D220D75A2CF4DC2C004C8EAB /* FirebaseAuthService.swift */; };
+		D220D75D2CF4DC65004C8EAB /* GoogleSignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D220D75C2CF4DC65004C8EAB /* GoogleSignInService.swift */; };
+		D226A5082D1F3A64008FB901 /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D226A5072D1F3A64008FB901 /* AddTransactionView.swift */; };
+		D226A50A2D1F3A83008FB901 /* AddTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D226A5092D1F3A83008FB901 /* AddTransactionViewModel.swift */; };
+		D22D33992CB92721007997DD /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D33982CB92721007997DD /* Coin.swift */; };
+		D22D339D2CB92ABC007997DD /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D339C2CB92ABC007997DD /* SwiftDataManager.swift */; };
+		D22D33A02CB9342A007997DD /* SwiftDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D339F2CB9342A007997DD /* SwiftDataError.swift */; };
+		D26389742D1DE0DA003DDF84 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26389732D1DE0DA003DDF84 /* Transaction.swift */; };
+		D26389762D1DE440003DDF84 /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26389752D1DE440003DDF84 /* Portfolio.swift */; };
+		D284FF312D133A85007875B6 /* CryptoCompareViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284FF302D133A85007875B6 /* CryptoCompareViewModelTests.swift */; };
+		D28558492CF8B43C0023A2D5 /* PriceAlertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28558482CF8B43C0023A2D5 /* PriceAlertsView.swift */; };
+		D285584D2CF8B4540023A2D5 /* PriceAlertsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D285584C2CF8B4540023A2D5 /* PriceAlertsViewModel.swift */; };
+		D28C184E2D0B26F000291920 /* GlobalCryptoMarketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28C184D2D0B26F000291920 /* GlobalCryptoMarketData.swift */; };
+		D28C18502D0B270000291920 /* GlobalMarketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28C184F2D0B270000291920 /* GlobalMarketData.swift */; };
+		D2A52FDD2CEBC415003C1275 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A52FDC2CEBC415003C1275 /* AppConfig.swift */; };
+		D2AAC1F62CCFF83B00CBAFB0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2AAC1F52CCFF83B00CBAFB0 /* Colors.xcassets */; };
+		D2D0F9EC2CC2DF3F00712717 /* CoinFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D0F9EB2CC2DF3F00712717 /* CoinFactoryMock.swift */; };
+		D2D0F9EE2CC2E0C300712717 /* Coin+Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D0F9ED2CC2E0C300712717 /* Coin+Assertions.swift */; };
+		D2D795742CFA292600950125 /* UnderlinedTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D795732CFA292600950125 /* UnderlinedTextFieldStyle.swift */; };
+		D2D795792CFDD0D500950125 /* PriceAlertsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D795782CFDD0D500950125 /* PriceAlertsViewModelTests.swift */; };
+		D2D7957B2CFDF8C100950125 /* SettingsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D7957A2CFDF8C100950125 /* SettingsViewModelTests.swift */; };
+		D2D7957D2CFDF91100950125 /* GoogleSignInServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D7957C2CFDF91100950125 /* GoogleSignInServiceMock.swift */; };
+		D2D795852D01F45D00950125 /* CryptoCompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D795842D01F45D00950125 /* CryptoCompareView.swift */; };
+		D2D795872D01F46800950125 /* CryptoCompareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D795862D01F46800950125 /* CryptoCompareViewModel.swift */; };
+		D2D7958C2D02071E00950125 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D7958B2D02071E00950125 /* PortfolioView.swift */; };
+		D2D7958E2D02072800950125 /* PortfolioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D7958D2D02072800950125 /* PortfolioViewModel.swift */; };
+		D2D795932D02083300950125 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D795922D02083300950125 /* NewsView.swift */; };
+		D2D795952D02085100950125 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D795942D02085100950125 /* NewsViewModel.swift */; };
+		D2EFF9052CDA2F32004AA5A5 /* Comparable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EFF9042CDA2F32004AA5A5 /* Comparable+Extensions.swift */; };
+		D2EFF9072CDCF6EF004AA5A5 /* Optional+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EFF9062CDCF6EE004AA5A5 /* Optional+Extensions.swift */; };
+		D2EFF90C2CDD111C004AA5A5 /* CoinDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EFF90B2CDD111C004AA5A5 /* CoinDetailsViewModel.swift */; };
+		D2EFF90E2CDD1129004AA5A5 /* CoinDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EFF90D2CDD1129004AA5A5 /* CoinDetailsView.swift */; };
+		D2EFF9142CDE20B8004AA5A5 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EFF9132CDE20B8004AA5A5 /* ChartData.swift */; };
+		D2EFF9162CDE4C88004AA5A5 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EFF9152CDE4C88004AA5A5 /* Date+Extensions.swift */; };
+		D2EFF91B2CE23A8F004AA5A5 /* ChartDataFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EFF91A2CE23A8F004AA5A5 /* ChartDataFactoryMock.swift */; };
+		D2EFF91D2CE23DD0004AA5A5 /* ChartData+Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EFF91C2CE23DD0004AA5A5 /* ChartData+Assertions.swift */; };
+		D2EFF91F2CE24301004AA5A5 /* CoinDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EFF91E2CE24301004AA5A5 /* CoinDetailsViewModelTests.swift */; };
+		D2F6DD642CC650D4009EF857 /* PriceAlertServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F6DD632CC650D4009EF857 /* PriceAlertServiceTests.swift */; };
+		D2F6DD682CC6514E009EF857 /* PriceAlertFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F6DD672CC6514E009EF857 /* PriceAlertFactoryMock.swift */; };
+		D2F6DD6A2CC65216009EF857 /* PriceAlert+Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F6DD692CC65216009EF857 /* PriceAlert+Assertions.swift */; };
+		D2F6DD6C2CC682C3009EF857 /* PriceAlertServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F6DD6B2CC682C3009EF857 /* PriceAlertServiceMock.swift */; };
+		FA07AC2629F91120008F6484 /* MarketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07AC2529F91120008F6484 /* MarketData.swift */; };
+		FA07AC3029F93292008F6484 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07AC2F29F93292008F6484 /* Double+Extensions.swift */; };
+		FA61B3F12A41B71D008A9FB9 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61B3F02A41B71D008A9FB9 /* BaseViewModel.swift */; };
+		FA8A08852A1CF8500083B8DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A08842A1CF8500083B8DB /* AppDelegate.swift */; };
+		FA8A08892A1CFA820083B8DB /* PriceAlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A08882A1CFA820083B8DB /* PriceAlertService.swift */; };
+		FA8A088D2A1CFAF90083B8DB /* PriceAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A088C2A1CFAF90083B8DB /* PriceAlert.swift */; };
+		FA8A08902A1CFD040083B8DB /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A088F2A1CFD040083B8DB /* UserDefaultsManager.swift */; };
+		FA8A08922A1CFD130083B8DB /* UserDefaultsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A08912A1CFD130083B8DB /* UserDefaultsError.swift */; };
+		FA8F60CA2A4DA40A0050C983 /* MarketDataFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F60C92A4DA40A0050C983 /* MarketDataFactoryMock.swift */; };
+		FAA83CC82A3B6E37001DEE1E /* UserDefaultsManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA83CC72A3B6E37001DEE1E /* UserDefaultsManagerMock.swift */; };
+		FAB361F729F447DB00A88050 /* WenMoonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB361F629F447DB00A88050 /* WenMoonApp.swift */; };
+		FAB361FE29F447DB00A88050 /* WatchlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB361FD29F447DB00A88050 /* WatchlistView.swift */; };
+		FAB3620029F447DC00A88050 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB361FF29F447DC00A88050 /* Images.xcassets */; };
+		FAB3623629F4513B00A88050 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3623529F4513B00A88050 /* HTTPRequest.swift */; };
+		FAB3623829F4514B00A88050 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3623729F4514B00A88050 /* APIError.swift */; };
+		FAB3623A29F4515C00A88050 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3623929F4515C00A88050 /* HTTPClient.swift */; };
+		FAB3623C29F4517800A88050 /* BaseBackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3623B29F4517800A88050 /* BaseBackendService.swift */; };
+		FAB3624729F453DD00A88050 /* CoinSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3624629F453DD00A88050 /* CoinSearchResult.swift */; };
+		FAB3624A29F453FC00A88050 /* CoinScannerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3624929F453FC00A88050 /* CoinScannerService.swift */; };
+		FAB3625029F4547100A88050 /* HTTPClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3624F29F4547100A88050 /* HTTPClientMock.swift */; };
+		FAB3625329F4549800A88050 /* CoinScannerServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3625229F4549800A88050 /* CoinScannerServiceTests.swift */; };
+		FAB3625729F457DC00A88050 /* CoinSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3625629F457DC00A88050 /* CoinSelectionView.swift */; };
+		FAB3625A29F4580C00A88050 /* CoinSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3625929F4580C00A88050 /* CoinSelectionViewModel.swift */; };
+		FAB3625F29F4595D00A88050 /* CoinScannerServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3625E29F4595D00A88050 /* CoinScannerServiceMock.swift */; };
+		FAB3626229F4598F00A88050 /* CoinSelectionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3626129F4598F00A88050 /* CoinSelectionViewModelTests.swift */; };
+		FAB3626A29F4651F00A88050 /* WatchlistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3626929F4651F00A88050 /* WatchlistViewModel.swift */; };
+		FAB3627529F469E700A88050 /* WatchlistViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3627429F469E700A88050 /* WatchlistViewModelTests.swift */; };
+		FACB39AE29FABBC800AA613E /* SwiftDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB39AD29FABBC800AA613E /* SwiftDataManagerMock.swift */; };
+		FAE0231E2A1E11F3009BA135 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0231D2A1E11F3009BA135 /* Notification+Name.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAB3620A29F447DC00A88050 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAB361EB29F447DB00A88050 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAB361F229F447DB00A88050;
+			remoteInfo = WenMoon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19338EEA2D75DE8900E5AA89 /* AppleSignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInService.swift; sourceTree = "<group>"; };
+		19338EEC2D75EE4900E5AA89 /* AppleSignInServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInServiceMock.swift; sourceTree = "<group>"; };
+		19338EEF2D76238F00E5AA89 /* WenMoon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WenMoon.entitlements; sourceTree = "<group>"; };
+		19338EF02D7A11A000E5AA89 /* PriceAlertStateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAlertStateRequest.swift; sourceTree = "<group>"; };
+		194212A42D5A4930008DE753 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		194212A62D5BB250008DE753 /* LinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksView.swift; sourceTree = "<group>"; };
+		194212A82D5D0D37008DE753 /* ExpandableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTextView.swift; sourceTree = "<group>"; };
+		194212AB2D5D13E1008DE753 /* CoinMarketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketsView.swift; sourceTree = "<group>"; };
+		194212AE2D5E0999008DE753 /* CoinMarketsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketsViewModel.swift; sourceTree = "<group>"; };
+		194212B02D5E1635008DE753 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		194212B32D5FB381008DE753 /* CoinDetails+MarketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoinDetails+MarketData.swift"; sourceTree = "<group>"; };
+		194212B52D5FB3C5008DE753 /* CoinDetails+Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoinDetails+Links.swift"; sourceTree = "<group>"; };
+		194212B72D5FB3E2008DE753 /* CoinDetails+Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoinDetails+Ticker.swift"; sourceTree = "<group>"; };
+		194212B92D5FBAE1008DE753 /* CoinMarketsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketsViewModelTests.swift; sourceTree = "<group>"; };
+		1950C8A42D737B0000595401 /* NewsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsServiceTests.swift; sourceTree = "<group>"; };
+		1950C8A72D737B2100595401 /* NewsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModelTests.swift; sourceTree = "<group>"; };
+		1950C8A92D737B2F00595401 /* NewsServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsServiceMock.swift; sourceTree = "<group>"; };
+		1950C8AD2D737C5600595401 /* NewsFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFactoryMock.swift; sourceTree = "<group>"; };
+		195C1E072E2015F400ACB15E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		195C1E0D2E20160500ACB15E /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		1961B51E2D34407600D0CEBC /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		1961B5232D37C04600D0CEBC /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		1961B5252D37C1C600D0CEBC /* ContentViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModelTests.swift; sourceTree = "<group>"; };
+		196CE7702D552B6B0084712E /* CoinDetailsFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsFactoryMock.swift; sourceTree = "<group>"; };
+		1975ED862DC8E6B300FCABB7 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		1975ED8B2DC8E94200FCABB7 /* paywallAnimation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = paywallAnimation.json; sourceTree = "<group>"; };
+		198655052D30394F00216097 /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
+		198655082D32DD6200216097 /* PortfolioFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioFactoryMock.swift; sourceTree = "<group>"; };
+		1986550F2D32E08D00216097 /* AddTransactionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewModelTests.swift; sourceTree = "<group>"; };
+		198655112D32E4A700216097 /* PortfolioViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewModelTests.swift; sourceTree = "<group>"; };
+		1986D1782D722F7F0044A05F /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
+		1986D17B2D722FA80044A05F /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		199266B02D7308FC0069357E /* AllNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNews.swift; sourceTree = "<group>"; };
+		199266B22D7313260069357E /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		199545FC2D9AA59C00FF4500 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		199546052D9AD3D200FF4500 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extensions.swift"; sourceTree = "<group>"; };
+		199546092D9C255C00FF4500 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		1995460F2D9DA98700FF4500 /* NeonBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeonBackgroundView.swift; sourceTree = "<group>"; };
+		199546112D9F26E400FF4500 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		199546132D9FCF3000FF4500 /* IdentifiableURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableURL.swift; sourceTree = "<group>"; };
+		199626362D89BD0C004073B8 /* AuthStateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStateProvider.swift; sourceTree = "<group>"; };
+		199626392D89BDB9004073B8 /* WatchlistService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistService.swift; sourceTree = "<group>"; };
+		1996263B2D89BDF6004073B8 /* AnonymousSignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousSignInService.swift; sourceTree = "<group>"; };
+		1996263E2D89BF53004073B8 /* GlobalMarketDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalMarketDataService.swift; sourceTree = "<group>"; };
+		199626432D89C114004073B8 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		199626452D89C11B004073B8 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		199626472D89CA7D004073B8 /* AuthOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthOptionsView.swift; sourceTree = "<group>"; };
+		1996264A2D89CE65004073B8 /* ViewDidLoadModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDidLoadModifier.swift; sourceTree = "<group>"; };
+		1996264D2D89FDC3004073B8 /* Watchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watchlist.swift; sourceTree = "<group>"; };
+		1996264F2D8AB5C3004073B8 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
+		199626512D8ACB3E004073B8 /* GlobalMarketDataServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalMarketDataServiceMock.swift; sourceTree = "<group>"; };
+		199626532D8ACC6E004073B8 /* GlobalMarketDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalMarketDataServiceTests.swift; sourceTree = "<group>"; };
+		199626552D8ACE34004073B8 /* AuthStateProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStateProviderMock.swift; sourceTree = "<group>"; };
+		199626572D8AD348004073B8 /* AuthViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelTests.swift; sourceTree = "<group>"; };
+		199626592D8AD3C7004073B8 /* AnonymousSignInServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousSignInServiceMock.swift; sourceTree = "<group>"; };
+		1996265B2D8ADB2A004073B8 /* WatchlistServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistServiceMock.swift; sourceTree = "<group>"; };
+		1996265D2D8B5FCA004073B8 /* WatchlistServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistServiceTests.swift; sourceTree = "<group>"; };
+		19A28BA82D6662E400753251 /* FearAndGreedIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FearAndGreedIndex.swift; sourceTree = "<group>"; };
+		19AF13022D53C37B00FDCD90 /* CoinDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetails.swift; sourceTree = "<group>"; };
+		19C0FB132D8196AC000CF3AB /* NotificationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationProvider.swift; sourceTree = "<group>"; };
+		19C0FB152D81B19D000CF3AB /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		19D8915B2D999B90000BDAF4 /* PurchasesProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesProviderMock.swift; sourceTree = "<group>"; };
+		19DD6E242D8C955800973524 /* PortfolioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioService.swift; sourceTree = "<group>"; };
+		19DD6E272D8D6AC700973524 /* PortfolioServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioServiceTests.swift; sourceTree = "<group>"; };
+		19DD6E292D8D6C7E00973524 /* PortfolioServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioServiceMock.swift; sourceTree = "<group>"; };
+		19DD6E2B2D8DA2C900973524 /* NotificationProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationProviderMock.swift; sourceTree = "<group>"; };
+		19E5C4342D8F49A2003C52DB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		19E5C43A2D909842003C52DB /* PurchasesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesProvider.swift; sourceTree = "<group>"; };
+		19E5C43D2D916609003C52DB /* ProPaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPaywallView.swift; sourceTree = "<group>"; };
+		19E5C4412D916A23003C52DB /* ProPaywallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPaywallViewModel.swift; sourceTree = "<group>"; };
+		19F254EC2D68E7FF001867CC /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
+		19F254EE2D69074C001867CC /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
+		19F254F42D69EFF5001867CC /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		19F254F82D69F783001867CC /* AccountServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceMock.swift; sourceTree = "<group>"; };
+		19F254FB2D6A28BF001867CC /* AccountFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFactoryMock.swift; sourceTree = "<group>"; };
+		19F255022D6A2B79001867CC /* AccountServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceTests.swift; sourceTree = "<group>"; };
+		19FC94792D74ADE10084DC24 /* SafeURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeURL.swift; sourceTree = "<group>"; };
+		D21A57BD2CCA65AB00AC2D13 /* MarketData+Assertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarketData+Assertions.swift"; sourceTree = "<group>"; };
+		D21A57C02CCAA8BC00AC2D13 /* ErrorFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorFactoryMock.swift; sourceTree = "<group>"; };
+		D21A57C22CCAAB9400AC2D13 /* Error+Assertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Assertions.swift"; sourceTree = "<group>"; };
+		D220D71E2CEC8BD4004C8EAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D220D7342CEC99D2004C8EAB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D220D7362CEC99DA004C8EAB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		D220D74A2CECFF16004C8EAB /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		D220D74C2CED04B6004C8EAB /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		D220D7542CF0B47F004C8EAB /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
+		D220D75A2CF4DC2C004C8EAB /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
+		D220D75C2CF4DC65004C8EAB /* GoogleSignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInService.swift; sourceTree = "<group>"; };
+		D226A5072D1F3A64008FB901 /* AddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionView.swift; sourceTree = "<group>"; };
+		D226A5092D1F3A83008FB901 /* AddTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewModel.swift; sourceTree = "<group>"; };
+		D22D33982CB92721007997DD /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		D22D339C2CB92ABC007997DD /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
+		D22D339F2CB9342A007997DD /* SwiftDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataError.swift; sourceTree = "<group>"; };
+		D26389732D1DE0DA003DDF84 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		D26389752D1DE440003DDF84 /* Portfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
+		D284FF302D133A85007875B6 /* CryptoCompareViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareViewModelTests.swift; sourceTree = "<group>"; };
+		D28558482CF8B43C0023A2D5 /* PriceAlertsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAlertsView.swift; sourceTree = "<group>"; };
+		D285584C2CF8B4540023A2D5 /* PriceAlertsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAlertsViewModel.swift; sourceTree = "<group>"; };
+		D28C184D2D0B26F000291920 /* GlobalCryptoMarketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalCryptoMarketData.swift; sourceTree = "<group>"; };
+		D28C184F2D0B270000291920 /* GlobalMarketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalMarketData.swift; sourceTree = "<group>"; };
+		D2A52FDC2CEBC415003C1275 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		D2AAC1F42CCFF3A900CBAFB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2AAC1F52CCFF83B00CBAFB0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		D2D0F9EB2CC2DF3F00712717 /* CoinFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinFactoryMock.swift; sourceTree = "<group>"; };
+		D2D0F9ED2CC2E0C300712717 /* Coin+Assertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coin+Assertions.swift"; sourceTree = "<group>"; };
+		D2D795732CFA292600950125 /* UnderlinedTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextFieldStyle.swift; sourceTree = "<group>"; };
+		D2D795782CFDD0D500950125 /* PriceAlertsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAlertsViewModelTests.swift; sourceTree = "<group>"; };
+		D2D7957A2CFDF8C100950125 /* SettingsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTests.swift; sourceTree = "<group>"; };
+		D2D7957C2CFDF91100950125 /* GoogleSignInServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInServiceMock.swift; sourceTree = "<group>"; };
+		D2D795842D01F45D00950125 /* CryptoCompareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareView.swift; sourceTree = "<group>"; };
+		D2D795862D01F46800950125 /* CryptoCompareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareViewModel.swift; sourceTree = "<group>"; };
+		D2D7958B2D02071E00950125 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
+		D2D7958D2D02072800950125 /* PortfolioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewModel.swift; sourceTree = "<group>"; };
+		D2D795922D02083300950125 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		D2D795942D02085100950125 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		D2EFF9042CDA2F32004AA5A5 /* Comparable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comparable+Extensions.swift"; sourceTree = "<group>"; };
+		D2EFF9062CDCF6EE004AA5A5 /* Optional+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extensions.swift"; sourceTree = "<group>"; };
+		D2EFF90B2CDD111C004AA5A5 /* CoinDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsViewModel.swift; sourceTree = "<group>"; };
+		D2EFF90D2CDD1129004AA5A5 /* CoinDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsView.swift; sourceTree = "<group>"; };
+		D2EFF9132CDE20B8004AA5A5 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
+		D2EFF9152CDE4C88004AA5A5 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		D2EFF91A2CE23A8F004AA5A5 /* ChartDataFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDataFactoryMock.swift; sourceTree = "<group>"; };
+		D2EFF91C2CE23DD0004AA5A5 /* ChartData+Assertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChartData+Assertions.swift"; sourceTree = "<group>"; };
+		D2EFF91E2CE24301004AA5A5 /* CoinDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		D2F6DD632CC650D4009EF857 /* PriceAlertServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAlertServiceTests.swift; sourceTree = "<group>"; };
+		D2F6DD672CC6514E009EF857 /* PriceAlertFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAlertFactoryMock.swift; sourceTree = "<group>"; };
+		D2F6DD692CC65216009EF857 /* PriceAlert+Assertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PriceAlert+Assertions.swift"; sourceTree = "<group>"; };
+		D2F6DD6B2CC682C3009EF857 /* PriceAlertServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAlertServiceMock.swift; sourceTree = "<group>"; };
+		FA07AC2529F91120008F6484 /* MarketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketData.swift; sourceTree = "<group>"; };
+		FA07AC2F29F93292008F6484 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		FA61B3F02A41B71D008A9FB9 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		FA8A08842A1CF8500083B8DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA8A08882A1CFA820083B8DB /* PriceAlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAlertService.swift; sourceTree = "<group>"; };
+		FA8A088C2A1CFAF90083B8DB /* PriceAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAlert.swift; sourceTree = "<group>"; };
+		FA8A088F2A1CFD040083B8DB /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		FA8A08912A1CFD130083B8DB /* UserDefaultsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsError.swift; sourceTree = "<group>"; };
+		FA8F60C92A4DA40A0050C983 /* MarketDataFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataFactoryMock.swift; sourceTree = "<group>"; };
+		FAA83CC72A3B6E37001DEE1E /* UserDefaultsManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManagerMock.swift; sourceTree = "<group>"; };
+		FAB361F329F447DB00A88050 /* WenMoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WenMoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB361F629F447DB00A88050 /* WenMoonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WenMoonApp.swift; sourceTree = "<group>"; };
+		FAB361FD29F447DB00A88050 /* WatchlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistView.swift; sourceTree = "<group>"; };
+		FAB361FF29F447DC00A88050 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FAB3620929F447DC00A88050 /* WenMoonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WenMoonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB3623529F4513B00A88050 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		FAB3623729F4514B00A88050 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		FAB3623929F4515C00A88050 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		FAB3623B29F4517800A88050 /* BaseBackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBackendService.swift; sourceTree = "<group>"; };
+		FAB3624629F453DD00A88050 /* CoinSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSearchResult.swift; sourceTree = "<group>"; };
+		FAB3624929F453FC00A88050 /* CoinScannerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinScannerService.swift; sourceTree = "<group>"; };
+		FAB3624F29F4547100A88050 /* HTTPClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientMock.swift; sourceTree = "<group>"; };
+		FAB3625229F4549800A88050 /* CoinScannerServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinScannerServiceTests.swift; sourceTree = "<group>"; };
+		FAB3625629F457DC00A88050 /* CoinSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSelectionView.swift; sourceTree = "<group>"; };
+		FAB3625929F4580C00A88050 /* CoinSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSelectionViewModel.swift; sourceTree = "<group>"; };
+		FAB3625E29F4595D00A88050 /* CoinScannerServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinScannerServiceMock.swift; sourceTree = "<group>"; };
+		FAB3626129F4598F00A88050 /* CoinSelectionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSelectionViewModelTests.swift; sourceTree = "<group>"; };
+		FAB3626929F4651F00A88050 /* WatchlistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistViewModel.swift; sourceTree = "<group>"; };
+		FAB3627429F469E700A88050 /* WatchlistViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistViewModelTests.swift; sourceTree = "<group>"; };
+		FACB39AD29FABBC800AA613E /* SwiftDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManagerMock.swift; sourceTree = "<group>"; };
+		FAE0231D2A1E11F3009BA135 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAB361F029F447DB00A88050 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D220D73F2CECEBF4004C8EAB /* GoogleSignInSwift in Frameworks */,
+				D220D7492CECF7AB004C8EAB /* FirebaseAuth in Frameworks */,
+				19E5C4322D8F4962003C52DB /* RevenueCatUI in Frameworks */,
+				19E5C4352D8F49A2003C52DB /* StoreKit.framework in Frameworks */,
+				199546022D9AB2C600FF4500 /* FirebaseAuth in Frameworks */,
+				19E5C4302D8F4962003C52DB /* RevenueCat in Frameworks */,
+				1975ED8A2DC8E6E100FCABB7 /* Lottie in Frameworks */,
+				D220D72C2CEC97A3004C8EAB /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				199546042D9AB2C600FF4500 /* FirebaseCrashlytics in Frameworks */,
+				D220D73D2CECA702004C8EAB /* GoogleSignInSwift in Frameworks */,
+				D220D7472CECF7AB004C8EAB /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB3620629F447DC00A88050 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		194212B22D5FB2FC008DE753 /* CoinDetails */ = {
+			isa = PBXGroup;
+			children = (
+				19AF13022D53C37B00FDCD90 /* CoinDetails.swift */,
+				194212B32D5FB381008DE753 /* CoinDetails+MarketData.swift */,
+				194212B52D5FB3C5008DE753 /* CoinDetails+Links.swift */,
+				194212B72D5FB3E2008DE753 /* CoinDetails+Ticker.swift */,
+			);
+			path = CoinDetails;
+			sourceTree = "<group>";
+		};
+		194212BB2D5FBE20008DE753 /* CoinDetails */ = {
+			isa = PBXGroup;
+			children = (
+				D2EFF91E2CE24301004AA5A5 /* CoinDetailsViewModelTests.swift */,
+				194212B92D5FBAE1008DE753 /* CoinMarketsViewModelTests.swift */,
+			);
+			path = CoinDetails;
+			sourceTree = "<group>";
+		};
+		1950C8AC2D737C4700595401 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				1950C8AD2D737C5600595401 /* NewsFactoryMock.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		195C1E062E2015E400ACB15E /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				195C1E072E2015F400ACB15E /* Release.xcconfig */,
+				195C1E0D2E20160500ACB15E /* Debug.xcconfig */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		1961B5202D37C01200D0CEBC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1961B5232D37C04600D0CEBC /* ContentViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1961B5212D37C01700D0CEBC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D220D71E2CEC8BD4004C8EAB /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1961B5222D37C02100D0CEBC /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				1961B5202D37C01200D0CEBC /* ViewModels */,
+				1961B5212D37C01700D0CEBC /* Views */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		196CE76F2D552B5B0084712E /* CoinDetails */ = {
+			isa = PBXGroup;
+			children = (
+				196CE7702D552B6B0084712E /* CoinDetailsFactoryMock.swift */,
+			);
+			path = CoinDetails;
+			sourceTree = "<group>";
+		};
+		197E116F2DF58AD800CD505C /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				D220D74A2CECFF16004C8EAB /* UIApplication+Extensions.swift */,
+				199546052D9AD3D200FF4500 /* UIDevice+Extensions.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		197E11702DF58ADD00CD505C /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				194212B02D5E1635008DE753 /* View+Extensions.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		198655042D2ED1FC00216097 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D2D795842D01F45D00950125 /* CryptoCompareView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		198655072D32DD5600216097 /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				198655082D32DD6200216097 /* PortfolioFactoryMock.swift */,
+			);
+			path = Portfolio;
+			sourceTree = "<group>";
+		};
+		1986550A2D32E02F00216097 /* Coins */ = {
+			isa = PBXGroup;
+			children = (
+				194212BB2D5FBE20008DE753 /* CoinDetails */,
+				FAB3626129F4598F00A88050 /* CoinSelectionViewModelTests.swift */,
+			);
+			path = Coins;
+			sourceTree = "<group>";
+		};
+		1986550B2D32E04800216097 /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				198655112D32E4A700216097 /* PortfolioViewModelTests.swift */,
+				1986550F2D32E08D00216097 /* AddTransactionViewModelTests.swift */,
+			);
+			path = Portfolio;
+			sourceTree = "<group>";
+		};
+		1986D1772D722F700044A05F /* News */ = {
+			isa = PBXGroup;
+			children = (
+				1986D17A2D722FA00044A05F /* Models */,
+				1986D1782D722F7F0044A05F /* NewsService.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		1986D17A2D722FA00044A05F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				199266B02D7308FC0069357E /* AllNews.swift */,
+				1986D17B2D722FA80044A05F /* News.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		199626382D89BDAB004073B8 /* Watchlist */ = {
+			isa = PBXGroup;
+			children = (
+				1996264C2D89FDBD004073B8 /* Models */,
+				199626392D89BDB9004073B8 /* WatchlistService.swift */,
+			);
+			path = Watchlist;
+			sourceTree = "<group>";
+		};
+		1996263D2D89BF41004073B8 /* GlobalMarketData */ = {
+			isa = PBXGroup;
+			children = (
+				1996263E2D89BF53004073B8 /* GlobalMarketDataService.swift */,
+			);
+			path = GlobalMarketData;
+			sourceTree = "<group>";
+		};
+		199626402D89C0F8004073B8 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				199626412D89C102004073B8 /* ViewModels */,
+				199626422D89C108004073B8 /* Views */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		199626412D89C102004073B8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				199626432D89C114004073B8 /* AuthViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		199626422D89C108004073B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				199626452D89C11B004073B8 /* AuthView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		199626492D89CE57004073B8 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				1996264A2D89CE65004073B8 /* ViewDidLoadModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		1996264C2D89FDBD004073B8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1996264D2D89FDC3004073B8 /* Watchlist.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		19D8914C2D995E0A000BDAF4 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				199626362D89BD0C004073B8 /* AuthStateProvider.swift */,
+				19E5C43A2D909842003C52DB /* PurchasesProvider.swift */,
+				19C0FB132D8196AC000CF3AB /* NotificationProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		19D8914E2D995E36000BDAF4 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				199626552D8ACE34004073B8 /* AuthStateProviderMock.swift */,
+				19D8915B2D999B90000BDAF4 /* PurchasesProviderMock.swift */,
+				19DD6E2B2D8DA2C900973524 /* NotificationProviderMock.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		19DD6E232D8C954300973524 /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				19DD6E262D8C956100973524 /* Models */,
+				19DD6E242D8C955800973524 /* PortfolioService.swift */,
+			);
+			path = Portfolio;
+			sourceTree = "<group>";
+		};
+		19DD6E262D8C956100973524 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D26389752D1DE440003DDF84 /* Portfolio.swift */,
+				D26389732D1DE0DA003DDF84 /* Transaction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		19E5C4332D8F49A2003C52DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19E5C4342D8F49A2003C52DB /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		19E5C43C2D9165FA003C52DB /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				19E5C4402D916A17003C52DB /* ViewModels */,
+				19E5C43F2D916A10003C52DB /* Views */,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
+		19E5C43F2D916A10003C52DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				19E5C43D2D916609003C52DB /* ProPaywallView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		19E5C4402D916A17003C52DB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				19E5C4412D916A23003C52DB /* ProPaywallViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		19F254F02D6907A2001867CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				19F254FD2D6A29D8001867CC /* Errors */,
+				19F254F42D69EFF5001867CC /* Account.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		19F254F32D69EBBB001867CC /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				19F254EC2D68E7FF001867CC /* AccountService.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		19F254FA2D6A28B0001867CC /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				19F254FB2D6A28BF001867CC /* AccountFactoryMock.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		19F254FD2D6A29D8001867CC /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				19F254EE2D69074C001867CC /* AuthError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		19FC94782D74ADD10084DC24 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA07AC2E29F93282008F6484 /* Extensions */,
+				19FC94792D74ADE10084DC24 /* SafeURL.swift */,
+				199546132D9FCF3000FF4500 /* IdentifiableURL.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D21A57BF2CCAA7FB00AC2D13 /* MarketData */ = {
+			isa = PBXGroup;
+			children = (
+				FA8F60C92A4DA40A0050C983 /* MarketDataFactoryMock.swift */,
+				D21A57BD2CCA65AB00AC2D13 /* MarketData+Assertions.swift */,
+			);
+			path = MarketData;
+			sourceTree = "<group>";
+		};
+		D21A57C42CCAAB9900AC2D13 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				D21A57C02CCAA8BC00AC2D13 /* ErrorFactoryMock.swift */,
+				D21A57C22CCAAB9400AC2D13 /* Error+Assertions.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		D220D7302CEC99B6004C8EAB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D220D7322CEC99C4004C8EAB /* ViewModels */,
+				D220D7312CEC99C0004C8EAB /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D220D7312CEC99C0004C8EAB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D220D7342CEC99D2004C8EAB /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D220D7322CEC99C4004C8EAB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D220D7362CEC99DA004C8EAB /* SettingsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D220D74E2CED050E004C8EAB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FA61B3EF2A41B714008A9FB9 /* Base */,
+				1961B5222D37C02100D0CEBC /* Content */,
+				199626402D89C0F8004073B8 /* Auth */,
+				FAB3625429F457C100A88050 /* CoinSelection */,
+				D2EFF9082CDD10FC004AA5A5 /* CoinDetails */,
+				D28558472CF8B42B0023A2D5 /* PriceAlerts */,
+				19E5C43C2D9165FA003C52DB /* Paywall */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D220D74F2CED0519004C8EAB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D220D74C2CED04B6004C8EAB /* BaseView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D220D7502CED0520004C8EAB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FA61B3F02A41B71D008A9FB9 /* BaseViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D220D7562CF4DC06004C8EAB /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				19F254F02D6907A2001867CC /* Models */,
+				19F254F32D69EBBB001867CC /* Account */,
+				D220D7572CF4DC0E004C8EAB /* Firebase */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		D220D7572CF4DC0E004C8EAB /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				D220D75A2CF4DC2C004C8EAB /* FirebaseAuthService.swift */,
+				19338EEA2D75DE8900E5AA89 /* AppleSignInService.swift */,
+				D220D75C2CF4DC65004C8EAB /* GoogleSignInService.swift */,
+				1996263B2D89BDF6004073B8 /* AnonymousSignInService.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		D22D33962CB92707007997DD /* SwiftData */ = {
+			isa = PBXGroup;
+			children = (
+				D22D339C2CB92ABC007997DD /* SwiftDataManager.swift */,
+				D22D339F2CB9342A007997DD /* SwiftDataError.swift */,
+			);
+			path = SwiftData;
+			sourceTree = "<group>";
+		};
+		D275F5912CC972FE00EB4560 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				FA8A088E2A1CFCF20083B8DB /* UserDefaults */,
+				D22D33962CB92707007997DD /* SwiftData */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		D28558472CF8B42B0023A2D5 /* PriceAlerts */ = {
+			isa = PBXGroup;
+			children = (
+				D285584B2CF8B4480023A2D5 /* ViewModels */,
+				D285584A2CF8B4410023A2D5 /* Views */,
+			);
+			path = PriceAlerts;
+			sourceTree = "<group>";
+		};
+		D285584A2CF8B4410023A2D5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D28558482CF8B43C0023A2D5 /* PriceAlertsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D285584B2CF8B4480023A2D5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D285584C2CF8B4540023A2D5 /* PriceAlertsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D2A52FDE2CEBCA6C003C1275 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				195C1E062E2015E400ACB15E /* Configs */,
+				D2AAC1F42CCFF3A900CBAFB0 /* Info.plist */,
+				199545FC2D9AA59C00FF4500 /* GoogleService-Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		D2ADB8F32CE5FCD3004DA208 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				D2EFF9132CDE20B8004AA5A5 /* ChartData.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		D2ADB8F62CE5FD1E004DA208 /* Coin */ = {
+			isa = PBXGroup;
+			children = (
+				D22D33982CB92721007997DD /* Coin.swift */,
+				FAB3624629F453DD00A88050 /* CoinSearchResult.swift */,
+				FA07AC2529F91120008F6484 /* MarketData.swift */,
+			);
+			path = Coin;
+			sourceTree = "<group>";
+		};
+		D2D0F9EF2CC2E15100712717 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				19F254FA2D6A28B0001867CC /* Account */,
+				D2F6DD652CC65123009EF857 /* Coin */,
+				196CE76F2D552B5B0084712E /* CoinDetails */,
+				D2EFF9192CE23A82004AA5A5 /* ChartData */,
+				D21A57BF2CCAA7FB00AC2D13 /* MarketData */,
+				D2F6DD662CC6513F009EF857 /* PriceAlert */,
+				198655072D32DD5600216097 /* Portfolio */,
+				1950C8AC2D737C4700595401 /* News */,
+				D21A57C42CCAAB9900AC2D13 /* Error */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D2D795722CFA291D00950125 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				D2D795732CFA292600950125 /* UnderlinedTextFieldStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		D2D795752CFDC69100950125 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				19338EEC2D75EE4900E5AA89 /* AppleSignInServiceMock.swift */,
+				D2D7957C2CFDF91100950125 /* GoogleSignInServiceMock.swift */,
+				199626592D8AD3C7004073B8 /* AnonymousSignInServiceMock.swift */,
+				19F254F82D69F783001867CC /* AccountServiceMock.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		D2D795802D01F38300950125 /* CryptoCompare */ = {
+			isa = PBXGroup;
+			children = (
+				D2D795832D01F44B00950125 /* ViewModels */,
+				198655042D2ED1FC00216097 /* Views */,
+			);
+			path = CryptoCompare;
+			sourceTree = "<group>";
+		};
+		D2D795832D01F44B00950125 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D2D795862D01F46800950125 /* CryptoCompareViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D2D795882D02070300950125 /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				D2D7958A2D02071100950125 /* ViewModels */,
+				D2D795892D02070C00950125 /* Views */,
+			);
+			path = Portfolio;
+			sourceTree = "<group>";
+		};
+		D2D795892D02070C00950125 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D2D7958B2D02071E00950125 /* PortfolioView.swift */,
+				D226A5072D1F3A64008FB901 /* AddTransactionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D2D7958A2D02071100950125 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D2D7958D2D02072800950125 /* PortfolioViewModel.swift */,
+				D226A5092D1F3A83008FB901 /* AddTransactionViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D2D7958F2D02081C00950125 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				D2D795912D02082900950125 /* ViewModels */,
+				D2D795902D02082500950125 /* Views */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		D2D795902D02082500950125 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D2D795922D02083300950125 /* NewsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D2D795912D02082900950125 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D2D795942D02085100950125 /* NewsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D2EFF9012CDA2ED3004AA5A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				199626472D89CA7D004073B8 /* AuthOptionsView.swift */,
+				D220D7542CF0B47F004C8EAB /* SelectionView.swift */,
+				198655052D30394F00216097 /* CoinImageView.swift */,
+				1961B51E2D34407600D0CEBC /* PlaceholderView.swift */,
+				194212A62D5BB250008DE753 /* LinksView.swift */,
+				194212A82D5D0D37008DE753 /* ExpandableTextView.swift */,
+				199266B22D7313260069357E /* SafariView.swift */,
+				1996264F2D8AB5C3004073B8 /* CustomProgressView.swift */,
+				199546092D9C255C00FF4500 /* PrimaryButton.swift */,
+				1995460F2D9DA98700FF4500 /* NeonBackgroundView.swift */,
+				199546112D9F26E400FF4500 /* MailView.swift */,
+				1975ED862DC8E6B300FCABB7 /* LottieView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D2EFF9082CDD10FC004AA5A5 /* CoinDetails */ = {
+			isa = PBXGroup;
+			children = (
+				D2EFF9092CDD110B004AA5A5 /* ViewModels */,
+				D2EFF90A2CDD1110004AA5A5 /* Views */,
+			);
+			path = CoinDetails;
+			sourceTree = "<group>";
+		};
+		D2EFF9092CDD110B004AA5A5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D2EFF90B2CDD111C004AA5A5 /* CoinDetailsViewModel.swift */,
+				194212AE2D5E0999008DE753 /* CoinMarketsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D2EFF90A2CDD1110004AA5A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D2EFF90D2CDD1129004AA5A5 /* CoinDetailsView.swift */,
+				194212AB2D5D13E1008DE753 /* CoinMarketsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D2EFF9192CE23A82004AA5A5 /* ChartData */ = {
+			isa = PBXGroup;
+			children = (
+				D2EFF91A2CE23A8F004AA5A5 /* ChartDataFactoryMock.swift */,
+				D2EFF91C2CE23DD0004AA5A5 /* ChartData+Assertions.swift */,
+			);
+			path = ChartData;
+			sourceTree = "<group>";
+		};
+		D2F6DD652CC65123009EF857 /* Coin */ = {
+			isa = PBXGroup;
+			children = (
+				D2D0F9EB2CC2DF3F00712717 /* CoinFactoryMock.swift */,
+				D2D0F9ED2CC2E0C300712717 /* Coin+Assertions.swift */,
+			);
+			path = Coin;
+			sourceTree = "<group>";
+		};
+		D2F6DD662CC6513F009EF857 /* PriceAlert */ = {
+			isa = PBXGroup;
+			children = (
+				D2F6DD672CC6514E009EF857 /* PriceAlertFactoryMock.swift */,
+				D2F6DD692CC65216009EF857 /* PriceAlert+Assertions.swift */,
+			);
+			path = PriceAlert;
+			sourceTree = "<group>";
+		};
+		D2F6DD6D2CC68EB2009EF857 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D2D795752CFDC69100950125 /* Authorization */,
+				199626512D8ACB3E004073B8 /* GlobalMarketDataServiceMock.swift */,
+				FAB3625E29F4595D00A88050 /* CoinScannerServiceMock.swift */,
+				1996265B2D8ADB2A004073B8 /* WatchlistServiceMock.swift */,
+				19DD6E292D8D6C7E00973524 /* PortfolioServiceMock.swift */,
+				D2F6DD6B2CC682C3009EF857 /* PriceAlertServiceMock.swift */,
+				1950C8A92D737B2F00595401 /* NewsServiceMock.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D2F6DD6E2CC68EBA009EF857 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				FAA83CC72A3B6E37001DEE1E /* UserDefaultsManagerMock.swift */,
+				FACB39AD29FABBC800AA613E /* SwiftDataManagerMock.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		FA07AC2E29F93282008F6484 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				197E11702DF58ADD00CD505C /* SwiftUI */,
+				197E116F2DF58AD800CD505C /* UIKit */,
+				FAE0231C2A1E11E4009BA135 /* Notification */,
+				FA07AC2F29F93292008F6484 /* Double+Extensions.swift */,
+				D2EFF9062CDCF6EE004AA5A5 /* Optional+Extensions.swift */,
+				D2EFF9042CDA2F32004AA5A5 /* Comparable+Extensions.swift */,
+				D2EFF9152CDE4C88004AA5A5 /* Date+Extensions.swift */,
+				194212A42D5A4930008DE753 /* String+Extensions.swift */,
+				19C0FB152D81B19D000CF3AB /* Data+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA61B3EF2A41B714008A9FB9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D220D7502CED0520004C8EAB /* ViewModels */,
+				D220D74F2CED0519004C8EAB /* Views */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FA8A088E2A1CFCF20083B8DB /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				FA8A088F2A1CFD040083B8DB /* UserDefaultsManager.swift */,
+				FA8A08912A1CFD130083B8DB /* UserDefaultsError.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		FA8A08932A1D15260083B8DB /* PriceAlert */ = {
+			isa = PBXGroup;
+			children = (
+				FA8A08942A1D15300083B8DB /* Models */,
+				FA8A08882A1CFA820083B8DB /* PriceAlertService.swift */,
+			);
+			path = PriceAlert;
+			sourceTree = "<group>";
+		};
+		FA8A08942A1D15300083B8DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA8A088C2A1CFAF90083B8DB /* PriceAlert.swift */,
+				19338EF02D7A11A000E5AA89 /* PriceAlertStateRequest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA8A08952A1D15480083B8DB /* CoinScanner */ = {
+			isa = PBXGroup;
+			children = (
+				FAB3624229F453BB00A88050 /* Models */,
+				FAB3624929F453FC00A88050 /* CoinScannerService.swift */,
+			);
+			path = CoinScanner;
+			sourceTree = "<group>";
+		};
+		FAB361EA29F447DB00A88050 = {
+			isa = PBXGroup;
+			children = (
+				FAB361F529F447DB00A88050 /* WenMoon */,
+				FAB3620C29F447DC00A88050 /* WenMoonTests */,
+				19E5C4332D8F49A2003C52DB /* Frameworks */,
+				FAB361F429F447DB00A88050 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAB361F429F447DB00A88050 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAB361F329F447DB00A88050 /* WenMoon.app */,
+				FAB3620929F447DC00A88050 /* WenMoonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAB361F529F447DB00A88050 /* WenMoon */ = {
+			isa = PBXGroup;
+			children = (
+				FAB3622629F447F400A88050 /* Application */,
+				19FC94782D74ADD10084DC24 /* Helpers */,
+				FAB3622829F4482B00A88050 /* Data */,
+				FAB3622B29F4485500A88050 /* Presentation */,
+				FAB3622729F4480F00A88050 /* Resources */,
+				D2A52FDE2CEBCA6C003C1275 /* SupportingFiles */,
+			);
+			path = WenMoon;
+			sourceTree = "<group>";
+		};
+		FAB3620C29F447DC00A88050 /* WenMoonTests */ = {
+			isa = PBXGroup;
+			children = (
+				D2D0F9EF2CC2E15100712717 /* Helpers */,
+				FAB3624C29F4544100A88050 /* DataLayer */,
+				FAB3625C29F4592F00A88050 /* PresentationLayer */,
+			);
+			path = WenMoonTests;
+			sourceTree = "<group>";
+		};
+		FAB3622629F447F400A88050 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FAB361F629F447DB00A88050 /* WenMoonApp.swift */,
+				D2A52FDC2CEBC415003C1275 /* AppConfig.swift */,
+				FA8A08842A1CF8500083B8DB /* AppDelegate.swift */,
+				19338EEF2D76238F00E5AA89 /* WenMoon.entitlements */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FAB3622729F4480F00A88050 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1975ED8B2DC8E94200FCABB7 /* paywallAnimation.json */,
+				FAB361FF29F447DC00A88050 /* Images.xcassets */,
+				D2AAC1F52CCFF83B00CBAFB0 /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FAB3622829F4482B00A88050 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FAB3624129F453A400A88050 /* Services */,
+				19D8914C2D995E0A000BDAF4 /* Providers */,
+				D275F5912CC972FE00EB4560 /* Persistence */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FAB3622B29F4485500A88050 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FAB3622C29F4487200A88050 /* Modules */,
+				D2EFF9012CDA2ED3004AA5A5 /* Views */,
+				D2D795722CFA291D00950125 /* Styles */,
+				199626492D89CE57004073B8 /* Modifiers */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FAB3622C29F4487200A88050 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D220D74E2CED050E004C8EAB /* Common */,
+				FAB3622E29F44B0300A88050 /* Watchlist */,
+				D2D795882D02070300950125 /* Portfolio */,
+				D2D795802D01F38300950125 /* CryptoCompare */,
+				D2D7958F2D02081C00950125 /* News */,
+				D220D7302CEC99B6004C8EAB /* Settings */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FAB3622D29F4488300A88050 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAB361FD29F447DB00A88050 /* WatchlistView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FAB3622E29F44B0300A88050 /* Watchlist */ = {
+			isa = PBXGroup;
+			children = (
+				FAB3626829F4650E00A88050 /* ViewModels */,
+				FAB3622D29F4488300A88050 /* Views */,
+			);
+			path = Watchlist;
+			sourceTree = "<group>";
+		};
+		FAB3623229F4510D00A88050 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FAB3623329F4512100A88050 /* HTTPClient */,
+				FAB3623B29F4517800A88050 /* BaseBackendService.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FAB3623329F4512100A88050 /* HTTPClient */ = {
+			isa = PBXGroup;
+			children = (
+				FAB3623429F4512900A88050 /* Models */,
+				FAB3623929F4515C00A88050 /* HTTPClient.swift */,
+			);
+			path = HTTPClient;
+			sourceTree = "<group>";
+		};
+		FAB3623429F4512900A88050 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAB3623529F4513B00A88050 /* HTTPRequest.swift */,
+				FAB3623729F4514B00A88050 /* APIError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAB3624129F453A400A88050 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FAB3623229F4510D00A88050 /* Base */,
+				D220D7562CF4DC06004C8EAB /* Authorization */,
+				1996263D2D89BF41004073B8 /* GlobalMarketData */,
+				FA8A08952A1D15480083B8DB /* CoinScanner */,
+				199626382D89BDAB004073B8 /* Watchlist */,
+				19DD6E232D8C954300973524 /* Portfolio */,
+				FA8A08932A1D15260083B8DB /* PriceAlert */,
+				1986D1772D722F700044A05F /* News */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FAB3624229F453BB00A88050 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				194212B22D5FB2FC008DE753 /* CoinDetails */,
+				D2ADB8F62CE5FD1E004DA208 /* Coin */,
+				D2ADB8F32CE5FCD3004DA208 /* Chart */,
+				19A28BA82D6662E400753251 /* FearAndGreedIndex.swift */,
+				D28C184D2D0B26F000291920 /* GlobalCryptoMarketData.swift */,
+				D28C184F2D0B270000291920 /* GlobalMarketData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAB3624C29F4544100A88050 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				FAB3624E29F4546100A88050 /* Mocks */,
+				FAB3625129F4548300A88050 /* Services */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		FAB3624E29F4546100A88050 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				FAB3624F29F4547100A88050 /* HTTPClientMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		FAB3625129F4548300A88050 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				19F255022D6A2B79001867CC /* AccountServiceTests.swift */,
+				199626532D8ACC6E004073B8 /* GlobalMarketDataServiceTests.swift */,
+				FAB3625229F4549800A88050 /* CoinScannerServiceTests.swift */,
+				1996265D2D8B5FCA004073B8 /* WatchlistServiceTests.swift */,
+				19DD6E272D8D6AC700973524 /* PortfolioServiceTests.swift */,
+				D2F6DD632CC650D4009EF857 /* PriceAlertServiceTests.swift */,
+				1950C8A42D737B0000595401 /* NewsServiceTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FAB3625429F457C100A88050 /* CoinSelection */ = {
+			isa = PBXGroup;
+			children = (
+				FAB3625829F457F300A88050 /* ViewModels */,
+				FAB3625529F457CD00A88050 /* Views */,
+			);
+			path = CoinSelection;
+			sourceTree = "<group>";
+		};
+		FAB3625529F457CD00A88050 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAB3625629F457DC00A88050 /* CoinSelectionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FAB3625829F457F300A88050 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FAB3625929F4580C00A88050 /* CoinSelectionViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FAB3625C29F4592F00A88050 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				FAB3625D29F4593A00A88050 /* Mocks */,
+				FAB3626029F4596A00A88050 /* ViewModels */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		FAB3625D29F4593A00A88050 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				19D8914E2D995E36000BDAF4 /* Providers */,
+				D2F6DD6D2CC68EB2009EF857 /* Services */,
+				D2F6DD6E2CC68EBA009EF857 /* Persistence */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		FAB3626029F4596A00A88050 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1961B5252D37C1C600D0CEBC /* ContentViewModelTests.swift */,
+				199626572D8AD348004073B8 /* AuthViewModelTests.swift */,
+				FAB3627429F469E700A88050 /* WatchlistViewModelTests.swift */,
+				D2D795782CFDD0D500950125 /* PriceAlertsViewModelTests.swift */,
+				D284FF302D133A85007875B6 /* CryptoCompareViewModelTests.swift */,
+				1950C8A72D737B2100595401 /* NewsViewModelTests.swift */,
+				D2D7957A2CFDF8C100950125 /* SettingsViewModelTests.swift */,
+				1986550A2D32E02F00216097 /* Coins */,
+				1986550B2D32E04800216097 /* Portfolio */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FAB3626829F4650E00A88050 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FAB3626929F4651F00A88050 /* WatchlistViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FAE0231C2A1E11E4009BA135 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				FAE0231D2A1E11F3009BA135 /* Notification+Name.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAB361F229F447DB00A88050 /* WenMoon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAB3621D29F447DC00A88050 /* Build configuration list for PBXNativeTarget "WenMoon" */;
+			buildPhases = (
+				FAB361EF29F447DB00A88050 /* Sources */,
+				FAB361F029F447DB00A88050 /* Frameworks */,
+				FAB361F129F447DB00A88050 /* Resources */,
+				199545FF2D9AA71F00FF4500 /* Crashlytics */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WenMoon;
+			productName = WenMoon;
+			productReference = FAB361F329F447DB00A88050 /* WenMoon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAB3620829F447DC00A88050 /* WenMoonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAB3622029F447DC00A88050 /* Build configuration list for PBXNativeTarget "WenMoonTests" */;
+			buildPhases = (
+				FAB3620529F447DC00A88050 /* Sources */,
+				FAB3620629F447DC00A88050 /* Frameworks */,
+				FAB3620729F447DC00A88050 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAB3620B29F447DC00A88050 /* PBXTargetDependency */,
+			);
+			name = WenMoonTests;
+			productName = WenMoonTests;
+			productReference = FAB3620929F447DC00A88050 /* WenMoonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAB361EB29F447DB00A88050 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					FAB361F229F447DB00A88050 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					FAB3620829F447DC00A88050 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = FAB361F229F447DB00A88050;
+					};
+				};
+			};
+			buildConfigurationList = FAB361EE29F447DB00A88050 /* Build configuration list for PBXProject "WenMoon" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAB361EA29F447DB00A88050;
+			packageReferences = (
+				D220D73B2CECA702004C8EAB /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				19E5C42E2D8F4962003C52DB /* XCRemoteSwiftPackageReference "purchases-ios-spm" */,
+				199546002D9AB2C600FF4500 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				1975ED882DC8E6E100FCABB7 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FAB361F429F447DB00A88050 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAB361F229F447DB00A88050 /* WenMoon */,
+				FAB3620829F447DC00A88050 /* WenMoonTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAB361F129F447DB00A88050 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB3620029F447DC00A88050 /* Images.xcassets in Resources */,
+				199545FE2D9AA59C00FF4500 /* GoogleService-Info.plist in Resources */,
+				195C1E0F2E20160500ACB15E /* Debug.xcconfig in Resources */,
+				D2AAC1F62CCFF83B00CBAFB0 /* Colors.xcassets in Resources */,
+				1975ED8C2DC8E94200FCABB7 /* paywallAnimation.json in Resources */,
+				195C1E092E2015F400ACB15E /* Release.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB3620729F447DC00A88050 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				195C1E082E2015F400ACB15E /* Release.xcconfig in Resources */,
+				199545FD2D9AA59C00FF4500 /* GoogleService-Info.plist in Resources */,
+				195C1E0E2E20160500ACB15E /* Debug.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		199545FF2D9AA71F00FF4500 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}.debug.dylib",
+			);
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAB361EF29F447DB00A88050 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19DD6E252D8C955800973524 /* PortfolioService.swift in Sources */,
+				D22D33992CB92721007997DD /* Coin.swift in Sources */,
+				FAE0231E2A1E11F3009BA135 /* Notification+Name.swift in Sources */,
+				1986D17C2D722FA80044A05F /* News.swift in Sources */,
+				FA8A08852A1CF8500083B8DB /* AppDelegate.swift in Sources */,
+				19AF13032D53C37B00FDCD90 /* CoinDetails.swift in Sources */,
+				FA07AC2629F91120008F6484 /* MarketData.swift in Sources */,
+				D2D795932D02083300950125 /* NewsView.swift in Sources */,
+				D220D7552CF0B47F004C8EAB /* SelectionView.swift in Sources */,
+				D22D339D2CB92ABC007997DD /* SwiftDataManager.swift in Sources */,
+				194212B82D5FB3E2008DE753 /* CoinDetails+Ticker.swift in Sources */,
+				199546142D9FCF3000FF4500 /* IdentifiableURL.swift in Sources */,
+				19A28BA92D6662E400753251 /* FearAndGreedIndex.swift in Sources */,
+				D226A5082D1F3A64008FB901 /* AddTransactionView.swift in Sources */,
+				19C0FB142D8196AC000CF3AB /* NotificationProvider.swift in Sources */,
+				D28C18502D0B270000291920 /* GlobalMarketData.swift in Sources */,
+				D28558492CF8B43C0023A2D5 /* PriceAlertsView.swift in Sources */,
+				199266B32D7313260069357E /* SafariView.swift in Sources */,
+				D2EFF90E2CDD1129004AA5A5 /* CoinDetailsView.swift in Sources */,
+				1996263C2D89BDF6004073B8 /* AnonymousSignInService.swift in Sources */,
+				1996263F2D89BF53004073B8 /* GlobalMarketDataService.swift in Sources */,
+				19E5C43B2D909842003C52DB /* PurchasesProvider.swift in Sources */,
+				FA8A08902A1CFD040083B8DB /* UserDefaultsManager.swift in Sources */,
+				194212B42D5FB381008DE753 /* CoinDetails+MarketData.swift in Sources */,
+				FA61B3F12A41B71D008A9FB9 /* BaseViewModel.swift in Sources */,
+				D2D795852D01F45D00950125 /* CryptoCompareView.swift in Sources */,
+				D285584D2CF8B4540023A2D5 /* PriceAlertsViewModel.swift in Sources */,
+				1975ED872DC8E6B300FCABB7 /* LottieView.swift in Sources */,
+				D28C184E2D0B26F000291920 /* GlobalCryptoMarketData.swift in Sources */,
+				D26389742D1DE0DA003DDF84 /* Transaction.swift in Sources */,
+				D2EFF9072CDCF6EF004AA5A5 /* Optional+Extensions.swift in Sources */,
+				199546102D9DA98700FF4500 /* NeonBackgroundView.swift in Sources */,
+				FA8A08922A1CFD130083B8DB /* UserDefaultsError.swift in Sources */,
+				D2D7958E2D02072800950125 /* PortfolioViewModel.swift in Sources */,
+				194212AC2D5D13E1008DE753 /* CoinMarketsView.swift in Sources */,
+				194212AF2D5E0999008DE753 /* CoinMarketsViewModel.swift in Sources */,
+				FAB361F729F447DB00A88050 /* WenMoonApp.swift in Sources */,
+				194212B62D5FB3C5008DE753 /* CoinDetails+Links.swift in Sources */,
+				D22D33A02CB9342A007997DD /* SwiftDataError.swift in Sources */,
+				FAB3624729F453DD00A88050 /* CoinSearchResult.swift in Sources */,
+				194212A72D5BB250008DE753 /* LinksView.swift in Sources */,
+				19F254EF2D69074C001867CC /* AuthError.swift in Sources */,
+				D226A50A2D1F3A83008FB901 /* AddTransactionViewModel.swift in Sources */,
+				FA8A088D2A1CFAF90083B8DB /* PriceAlert.swift in Sources */,
+				19338EEB2D75DE8900E5AA89 /* AppleSignInService.swift in Sources */,
+				D220D71F2CEC8BD4004C8EAB /* ContentView.swift in Sources */,
+				FAB3623629F4513B00A88050 /* HTTPRequest.swift in Sources */,
+				19E5C4422D916A23003C52DB /* ProPaywallViewModel.swift in Sources */,
+				D220D74D2CED04B6004C8EAB /* BaseView.swift in Sources */,
+				FAB3623A29F4515C00A88050 /* HTTPClient.swift in Sources */,
+				194212B12D5E1635008DE753 /* View+Extensions.swift in Sources */,
+				FA8A08892A1CFA820083B8DB /* PriceAlertService.swift in Sources */,
+				199626372D89BD0C004073B8 /* AuthStateProvider.swift in Sources */,
+				199266B12D7308FC0069357E /* AllNews.swift in Sources */,
+				199626462D89C11B004073B8 /* AuthView.swift in Sources */,
+				198655062D30394F00216097 /* CoinImageView.swift in Sources */,
+				194212A92D5D0D37008DE753 /* ExpandableTextView.swift in Sources */,
+				FAB361FE29F447DB00A88050 /* WatchlistView.swift in Sources */,
+				FAB3623829F4514B00A88050 /* APIError.swift in Sources */,
+				FA07AC3029F93292008F6484 /* Double+Extensions.swift in Sources */,
+				194212A52D5A4930008DE753 /* String+Extensions.swift in Sources */,
+				19FC947A2D74ADE10084DC24 /* SafeURL.swift in Sources */,
+				19338EF12D7A11A000E5AA89 /* PriceAlertStateRequest.swift in Sources */,
+				1996264E2D89FDC3004073B8 /* Watchlist.swift in Sources */,
+				1961B51F2D34407600D0CEBC /* PlaceholderView.swift in Sources */,
+				19F254F52D69EFF5001867CC /* Account.swift in Sources */,
+				D2D795742CFA292600950125 /* UnderlinedTextFieldStyle.swift in Sources */,
+				D2EFF90C2CDD111C004AA5A5 /* CoinDetailsViewModel.swift in Sources */,
+				D2EFF9162CDE4C88004AA5A5 /* Date+Extensions.swift in Sources */,
+				FAB3625729F457DC00A88050 /* CoinSelectionView.swift in Sources */,
+				199546122D9F26E400FF4500 /* MailView.swift in Sources */,
+				D26389762D1DE440003DDF84 /* Portfolio.swift in Sources */,
+				D2D7958C2D02071E00950125 /* PortfolioView.swift in Sources */,
+				1996263A2D89BDB9004073B8 /* WatchlistService.swift in Sources */,
+				19F254ED2D68E7FF001867CC /* AccountService.swift in Sources */,
+				FAB3624A29F453FC00A88050 /* CoinScannerService.swift in Sources */,
+				199546062D9AD3D200FF4500 /* UIDevice+Extensions.swift in Sources */,
+				1996264B2D89CE65004073B8 /* ViewDidLoadModifier.swift in Sources */,
+				199626502D8AB5C3004073B8 /* CustomProgressView.swift in Sources */,
+				FAB3623C29F4517800A88050 /* BaseBackendService.swift in Sources */,
+				D220D74B2CECFF16004C8EAB /* UIApplication+Extensions.swift in Sources */,
+				D2D795952D02085100950125 /* NewsViewModel.swift in Sources */,
+				D2A52FDD2CEBC415003C1275 /* AppConfig.swift in Sources */,
+				D220D7352CEC99D2004C8EAB /* SettingsView.swift in Sources */,
+				D2D795872D01F46800950125 /* CryptoCompareViewModel.swift in Sources */,
+				FAB3625A29F4580C00A88050 /* CoinSelectionViewModel.swift in Sources */,
+				199626482D89CA7D004073B8 /* AuthOptionsView.swift in Sources */,
+				FAB3626A29F4651F00A88050 /* WatchlistViewModel.swift in Sources */,
+				D220D75D2CF4DC65004C8EAB /* GoogleSignInService.swift in Sources */,
+				1995460A2D9C255C00FF4500 /* PrimaryButton.swift in Sources */,
+				1986D1792D722F7F0044A05F /* NewsService.swift in Sources */,
+				19E5C43E2D916609003C52DB /* ProPaywallView.swift in Sources */,
+				D2EFF9142CDE20B8004AA5A5 /* ChartData.swift in Sources */,
+				1961B5242D37C04600D0CEBC /* ContentViewModel.swift in Sources */,
+				D220D7372CEC99DA004C8EAB /* SettingsViewModel.swift in Sources */,
+				199626442D89C114004073B8 /* AuthViewModel.swift in Sources */,
+				19C0FB162D81B19D000CF3AB /* Data+Extensions.swift in Sources */,
+				D2EFF9052CDA2F32004AA5A5 /* Comparable+Extensions.swift in Sources */,
+				D220D75B2CF4DC2C004C8EAB /* FirebaseAuthService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB3620529F447DC00A88050 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D7957D2CFDF91100950125 /* GoogleSignInServiceMock.swift in Sources */,
+				D2F6DD6C2CC682C3009EF857 /* PriceAlertServiceMock.swift in Sources */,
+				FA8F60CA2A4DA40A0050C983 /* MarketDataFactoryMock.swift in Sources */,
+				198655102D32E08D00216097 /* AddTransactionViewModelTests.swift in Sources */,
+				D21A57BE2CCA65AB00AC2D13 /* MarketData+Assertions.swift in Sources */,
+				FAB3625329F4549800A88050 /* CoinScannerServiceTests.swift in Sources */,
+				199626522D8ACB3E004073B8 /* GlobalMarketDataServiceMock.swift in Sources */,
+				FAB3627529F469E700A88050 /* WatchlistViewModelTests.swift in Sources */,
+				19DD6E282D8D6AC700973524 /* PortfolioServiceTests.swift in Sources */,
+				19F254FC2D6A28BF001867CC /* AccountFactoryMock.swift in Sources */,
+				D2F6DD6A2CC65216009EF857 /* PriceAlert+Assertions.swift in Sources */,
+				196CE7712D552B6B0084712E /* CoinDetailsFactoryMock.swift in Sources */,
+				199626542D8ACC6E004073B8 /* GlobalMarketDataServiceTests.swift in Sources */,
+				1961B5262D37C1C600D0CEBC /* ContentViewModelTests.swift in Sources */,
+				D2EFF91D2CE23DD0004AA5A5 /* ChartData+Assertions.swift in Sources */,
+				19F254F92D69F783001867CC /* AccountServiceMock.swift in Sources */,
+				FAB3625F29F4595D00A88050 /* CoinScannerServiceMock.swift in Sources */,
+				D21A57C32CCAAB9400AC2D13 /* Error+Assertions.swift in Sources */,
+				19DD6E2C2D8DA2C900973524 /* NotificationProviderMock.swift in Sources */,
+				1950C8A82D737B2100595401 /* NewsViewModelTests.swift in Sources */,
+				19338EED2D75EE4900E5AA89 /* AppleSignInServiceMock.swift in Sources */,
+				D2F6DD682CC6514E009EF857 /* PriceAlertFactoryMock.swift in Sources */,
+				199626562D8ACE34004073B8 /* AuthStateProviderMock.swift in Sources */,
+				199626582D8AD348004073B8 /* AuthViewModelTests.swift in Sources */,
+				198655122D32E4A700216097 /* PortfolioViewModelTests.swift in Sources */,
+				FAB3626229F4598F00A88050 /* CoinSelectionViewModelTests.swift in Sources */,
+				1950C8A52D737B0000595401 /* NewsServiceTests.swift in Sources */,
+				D2EFF91B2CE23A8F004AA5A5 /* ChartDataFactoryMock.swift in Sources */,
+				19D8915C2D999B90000BDAF4 /* PurchasesProviderMock.swift in Sources */,
+				D2D7957B2CFDF8C100950125 /* SettingsViewModelTests.swift in Sources */,
+				D2EFF91F2CE24301004AA5A5 /* CoinDetailsViewModelTests.swift in Sources */,
+				FAB3625029F4547100A88050 /* HTTPClientMock.swift in Sources */,
+				D284FF312D133A85007875B6 /* CryptoCompareViewModelTests.swift in Sources */,
+				D2D795792CFDD0D500950125 /* PriceAlertsViewModelTests.swift in Sources */,
+				1996265A2D8AD3C7004073B8 /* AnonymousSignInServiceMock.swift in Sources */,
+				1950C8AA2D737B2F00595401 /* NewsServiceMock.swift in Sources */,
+				198655092D32DD6200216097 /* PortfolioFactoryMock.swift in Sources */,
+				D2F6DD642CC650D4009EF857 /* PriceAlertServiceTests.swift in Sources */,
+				194212BA2D5FBAE1008DE753 /* CoinMarketsViewModelTests.swift in Sources */,
+				19F255032D6A2B79001867CC /* AccountServiceTests.swift in Sources */,
+				D2D0F9EC2CC2DF3F00712717 /* CoinFactoryMock.swift in Sources */,
+				FAA83CC82A3B6E37001DEE1E /* UserDefaultsManagerMock.swift in Sources */,
+				1996265C2D8ADB2A004073B8 /* WatchlistServiceMock.swift in Sources */,
+				D21A57C12CCAA8BC00AC2D13 /* ErrorFactoryMock.swift in Sources */,
+				1996265E2D8B5FCA004073B8 /* WatchlistServiceTests.swift in Sources */,
+				D2D0F9EE2CC2E0C300712717 /* Coin+Assertions.swift in Sources */,
+				19DD6E2A2D8D6C7E00973524 /* PortfolioServiceMock.swift in Sources */,
+				FACB39AE29FABBC800AA613E /* SwiftDataManagerMock.swift in Sources */,
+				1950C8AE2D737C5600595401 /* NewsFactoryMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAB3620B29F447DC00A88050 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAB361F229F447DB00A88050 /* WenMoon */;
+			targetProxy = FAB3620A29F447DC00A88050 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FAB3621B29F447DC00A88050 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 195C1E0D2E20160500ACB15E /* Debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FAB3621C29F447DC00A88050 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 195C1E072E2015F400ACB15E /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		FAB3621E29F447DC00A88050 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 195C1E0D2E20160500ACB15E /* Debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WenMoon/Application/WenMoon.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 4H24ZTYPFZ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WenMoon/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WenMoon;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.3.3;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arturxsan.wenmoon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FAB3621F29F447DC00A88050 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 195C1E072E2015F400ACB15E /* Release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WenMoon/Application/WenMoon.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 4H24ZTYPFZ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WenMoon/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WenMoon;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.3.3;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arturxsan.wenmoon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		FAB3622129F447DC00A88050 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 195C1E0D2E20160500ACB15E /* Debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 4H24ZTYPFZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = arturtkachenko.WenMoonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WenMoon.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WenMoon";
+			};
+			name = Debug;
+		};
+		FAB3622229F447DC00A88050 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 195C1E072E2015F400ACB15E /* Release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 4H24ZTYPFZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = arturtkachenko.WenMoonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WenMoon.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WenMoon";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAB361EE29F447DB00A88050 /* Build configuration list for PBXProject "WenMoon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB3621B29F447DC00A88050 /* Debug */,
+				FAB3621C29F447DC00A88050 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAB3621D29F447DC00A88050 /* Build configuration list for PBXNativeTarget "WenMoon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB3621E29F447DC00A88050 /* Debug */,
+				FAB3621F29F447DC00A88050 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAB3622029F447DC00A88050 /* Build configuration list for PBXNativeTarget "WenMoonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB3622129F447DC00A88050 /* Debug */,
+				FAB3622229F447DC00A88050 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1975ED882DC8E6E100FCABB7 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.1;
+			};
+		};
+		199546002D9AB2C600FF4500 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.10.0;
+			};
+		};
+		19E5C42E2D8F4962003C52DB /* XCRemoteSwiftPackageReference "purchases-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.20.1;
+			};
+		};
+		D220D72A2CEC97A3004C8EAB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.5.0;
+			};
+		};
+		D220D73B2CECA702004C8EAB /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1975ED892DC8E6E100FCABB7 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1975ED882DC8E6E100FCABB7 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+		199546012D9AB2C600FF4500 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 199546002D9AB2C600FF4500 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		199546032D9AB2C600FF4500 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 199546002D9AB2C600FF4500 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		19E5C42F2D8F4962003C52DB /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 19E5C42E2D8F4962003C52DB /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCat;
+		};
+		19E5C4312D8F4962003C52DB /* RevenueCatUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 19E5C42E2D8F4962003C52DB /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCatUI;
+		};
+		D220D72B2CEC97A3004C8EAB /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D220D72A2CEC97A3004C8EAB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		D220D73C2CECA702004C8EAB /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D220D73B2CECA702004C8EAB /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		D220D73E2CECEBF4004C8EAB /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D220D73B2CECA702004C8EAB /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		D220D7462CECF7AB004C8EAB /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D220D72A2CEC97A3004C8EAB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		D220D7482CECF7AB004C8EAB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D220D72A2CEC97A3004C8EAB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FAB361EB29F447DB00A88050 /* Project object */;
+}
