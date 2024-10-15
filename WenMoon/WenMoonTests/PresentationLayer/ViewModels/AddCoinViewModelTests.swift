@@ -6,16 +6,15 @@
 //
 
 import XCTest
-import Combine
 @testable import WenMoon
 
+@MainActor
 class AddCoinViewModelTests: XCTestCase {
 
     // MARK: - Properties
 
     var viewModel: AddCoinViewModel!
     var service: CoinScannerServiceMock!
-    var cancellables: Set<AnyCancellable>!
 
     // MARK: - Setup
 
@@ -23,122 +22,81 @@ class AddCoinViewModelTests: XCTestCase {
         super.setUp()
         service = CoinScannerServiceMock()
         viewModel = AddCoinViewModel(coinScannerService: service)
-        cancellables = Set<AnyCancellable>()
     }
 
     override func tearDown() {
         viewModel = nil
         service = nil
-        cancellables = nil
         super.tearDown()
     }
 
     // MARK: - Tests
 
-    func testFetchCoinsSuccess() {
-        let response: [Coin] = [.btc, .eth]
+    func testFetchCoinsSuccess() async throws {
+        let response = mockCoins
         service.getCoinsAtPageResult = .success(response)
 
-        let expectation = XCTestExpectation(description: "Fetch an array of coins on page 1")
-        viewModel.$coins
-            .dropFirst()
-            .sink { coins in
-                XCTAssertFalse(coins.isEmpty)
-                XCTAssertEqual(coins.count, response.count)
+        await viewModel.fetchCoins()
 
-                XCTAssertEqual(coins.first?.id, response.first?.id)
-                XCTAssertEqual(coins.first?.name, response.first?.name)
-                XCTAssertEqual(coins.first?.image, response.first?.image)
+        let result = viewModel.coins
+        XCTAssertFalse(result.isEmpty)
+        XCTAssertEqual(result.count, response.count)
 
-                XCTAssertEqual(coins.last?.id, response.last?.id)
-                XCTAssertEqual(coins.last?.name, response.last?.name)
-                XCTAssertEqual(coins.last?.image, response.last?.image)
+        XCTAssertEqual(result.first?.id, response.first?.id)
+        XCTAssertEqual(result.first?.name, response.first?.name)
+        XCTAssertEqual(result.first?.imageURL, response.first?.imageURL)
 
-                expectation.fulfill()
-            }
-            .store(in: &cancellables)
-
-        viewModel.fetchCoins()
-
-        wait(for: [expectation], timeout: 1)
+        XCTAssertEqual(result.last?.id, response.last?.id)
+        XCTAssertEqual(result.last?.name, response.last?.name)
+        XCTAssertEqual(result.last?.imageURL, response.last?.imageURL)
 
         XCTAssertNil(viewModel.errorMessage)
     }
 
-    func testFetchCoinsFailure() {
+    func testFetchCoinsFailure() async throws {
         let apiError: APIError = .apiError(description: "Mocked server error")
         service.getCoinsAtPageResult = .failure(apiError)
 
-        let expectation = XCTestExpectation(description: "Get a failure with API error")
-        viewModel.$errorMessage
-            .dropFirst()
-            .sink { errorMessage in
-                XCTAssertNotNil(errorMessage)
-                XCTAssertEqual(errorMessage, apiError.errorDescription)
-                expectation.fulfill()
-            }
-            .store(in: &cancellables)
+        await viewModel.fetchCoins()
 
-        viewModel.fetchCoins()
-
-        wait(for: [expectation], timeout: 1)
+        XCTAssertNotNil(viewModel.errorMessage)
+        XCTAssertEqual(viewModel.errorMessage, apiError.errorDescription)
     }
 
-    func testSearchCoinsByQuerySuccess() {
-        let coinSearchResult = CoinSearchResult.mock
-        let marketDataResponse = MarketData.mock
-        service.searchCoinsByQueryResult = .success(coinSearchResult)
-        service.getMarketDataForCoinsResult = .success(marketDataResponse)
+    func testSearchCoinsByQuerySuccess() async throws {
+        let searchResult = mockCoins
+        service.searchCoinsByQueryResult = .success(searchResult)
 
-        let expectation = XCTestExpectation(description: "Search for a specific coins by query")
-        let combinedPublisher = Publishers.CombineLatest(viewModel.$coins, viewModel.$marketData)
-        combinedPublisher
-            .dropFirst(2)
-            .sink { coins, marketData in
-                XCTAssertFalse(coins.isEmpty)
-                XCTAssertEqual(coins.count, coinSearchResult.coins.count)
+        await viewModel.searchCoins(for: "bit")
 
-                XCTAssertEqual(coins.first?.id, coinSearchResult.coins.first?.id)
-                XCTAssertEqual(coins.first?.name, coinSearchResult.coins.first?.name)
-                XCTAssertEqual(coins.first?.image, coinSearchResult.coins.first?.image)
-                XCTAssertEqual(coins.first?.marketCapRank, coinSearchResult.coins.first?.marketCapRank)
-                XCTAssertEqual(marketData[coins.first!.id]?.currentPrice, marketDataResponse[coinSearchResult.coins.first!.id]?.currentPrice)
-                XCTAssertEqual(marketData[coins.first!.id]?.priceChange, marketDataResponse[coinSearchResult.coins.first!.id]?.priceChange)
-                
-                XCTAssertEqual(coins.last?.id, coinSearchResult.coins.last?.id)
-                XCTAssertEqual(coins.last?.name, coinSearchResult.coins.last?.name)
-                XCTAssertEqual(coins.last?.image, coinSearchResult.coins.last?.image)
-                XCTAssertEqual(coins.last?.marketCapRank, coinSearchResult.coins.last?.marketCapRank)
-                XCTAssertEqual(marketData[coins.last!.id]?.currentPrice, marketDataResponse[coinSearchResult.coins.last!.id]?.currentPrice)
-                XCTAssertEqual(marketData[coins.last!.id]?.priceChange, marketDataResponse[coinSearchResult.coins.last!.id]?.priceChange)
+        let result = viewModel.coins
+        XCTAssertFalse(result.isEmpty)
+        XCTAssertEqual(result.count, searchResult.count)
 
-                expectation.fulfill()
-            }
-            .store(in: &cancellables)
+        XCTAssertEqual(result.first?.id, searchResult.first?.id)
+        XCTAssertEqual(result.first?.name, searchResult.first?.name)
+        XCTAssertEqual(result.first?.imageURL, searchResult.first?.imageURL)
+        XCTAssertEqual(result.first?.marketCapRank, searchResult.first?.marketCapRank)
+        XCTAssertEqual(result.first?.currentPrice, searchResult.first?.currentPrice)
+        XCTAssertEqual(result.first?.priceChangePercentage24H, searchResult.first?.priceChangePercentage24H)
 
-        viewModel.searchCoins(by: "bit")
-
-        wait(for: [expectation], timeout: 1)
+        XCTAssertEqual(result.last?.id, searchResult.last?.id)
+        XCTAssertEqual(result.last?.name, searchResult.last?.name)
+        XCTAssertEqual(result.last?.imageURL, searchResult.last?.imageURL)
+        XCTAssertEqual(result.last?.marketCapRank, searchResult.last?.marketCapRank)
+        XCTAssertEqual(result.last?.currentPrice, searchResult.last?.currentPrice)
+        XCTAssertEqual(result.last?.priceChangePercentage24H, searchResult.last?.priceChangePercentage24H)
 
         XCTAssertNil(viewModel.errorMessage)
     }
 
-    func testSearchCoinsByQueryEmptyResult() {
-        let response = CoinSearchResult.mock
+    func testSearchCoinsByQueryEmptyResult() async throws {
+        let response = [Coin]()
         service.searchCoinsByQueryResult = .success(response)
 
-        let expectation = XCTestExpectation(description: "Search for a specific coins by invalid query")
-        viewModel.$coins
-            .sink { coins in
-                XCTAssert(coins.isEmpty)
-                expectation.fulfill()
-            }
-            .store(in: &cancellables)
+        await viewModel.searchCoins(for: "sdfghjkl")
 
-        viewModel.searchCoins(by: "sdfghjkl")
-
-        wait(for: [expectation], timeout: 1)
-
+        XCTAssertTrue(viewModel.coins.isEmpty)
         XCTAssertNil(viewModel.errorMessage)
     }
 }

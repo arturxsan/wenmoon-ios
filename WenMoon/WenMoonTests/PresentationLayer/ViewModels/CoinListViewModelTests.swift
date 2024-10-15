@@ -6,10 +6,9 @@
 //
 
 import XCTest
-import CoreData
-import Combine
 @testable import WenMoon
 
+@MainActor
 class CoinListViewModelTests: XCTestCase {
 
     // MARK: - Properties
@@ -17,8 +16,7 @@ class CoinListViewModelTests: XCTestCase {
     var viewModel: CoinListViewModel!
     var coinScannerService: CoinScannerServiceMock!
     var priceAlertService: PriceAlertService!
-    var persistenceManager: PersistenceManagerMock!
-    var cancellables: Set<AnyCancellable>!
+    var swiftDataManager: SwiftDataManagerMock!
 
     // MARK: - Setup
 
@@ -26,181 +24,147 @@ class CoinListViewModelTests: XCTestCase {
         super.setUp()
         coinScannerService = CoinScannerServiceMock()
         priceAlertService = PriceAlertServiceImpl()
-        persistenceManager = PersistenceManagerMock()
-        viewModel = CoinListViewModel(coinScannerService: coinScannerService,
-                                      priceAlertService: priceAlertService)
-        cancellables = Set<AnyCancellable>()
+        swiftDataManager = SwiftDataManagerMock()
+        viewModel = CoinListViewModel(
+            coinScannerService: coinScannerService,
+            priceAlertService: priceAlertService,
+            swiftDataManager: swiftDataManager
+        )
     }
 
     override func tearDown() {
         viewModel = nil
         coinScannerService = nil
         priceAlertService = nil
-        persistenceManager = nil
-        cancellables = nil
+        swiftDataManager = nil
         super.tearDown()
     }
 
     // MARK: - Tests
 
-    func testFetchCoinsSuccess() {
-        let coins: [Coin] = [.btc, .eth]
+    func testFetchCoinsSuccess() async throws {
+        let coins = mockCoins
         let marketData = MarketData.mock
         coinScannerService.getMarketDataForCoinsResult = .success(marketData)
 
         for coin in coins {
-            let newCoin = CoinEntity(context: persistenceManager.context)
+            let newCoin = CoinData()
             newCoin.id = coin.id
             newCoin.name = coin.name
-            newCoin.image = coin.image
+            newCoin.imageURL = coin.imageURL
             newCoin.rank = coin.marketCapRank!
             newCoin.currentPrice = marketData[coin.id]!.currentPrice!
             newCoin.priceChange = marketData[coin.id]!.priceChange!
-
-            persistenceManager.fetchRequestResult.append(newCoin)
+            swiftDataManager.fetchResult.append(newCoin)
         }
 
-        let expectation = XCTestExpectation(description: "Fetch coins")
-        viewModel.$coins
-            .dropFirst()
-            .sink { receivedCoins in
-                XCTAssertFalse(receivedCoins.isEmpty)
-                XCTAssertEqual(receivedCoins.count, coins.count)
+        await viewModel.fetchCoins()
+        
+        XCTAssert(swiftDataManager.fetchMethodCalled)
 
-                XCTAssertEqual(receivedCoins.first?.id, coins.first?.id)
-                XCTAssertEqual(receivedCoins.first?.name, coins.first?.name)
-                XCTAssertEqual(receivedCoins.first?.image, coins.first?.image)
-                XCTAssertEqual(receivedCoins.first?.rank, coins.first?.marketCapRank)
-                XCTAssertEqual(receivedCoins.first?.currentPrice, marketData[coins.first!.id]?.currentPrice)
-                XCTAssertEqual(receivedCoins.first?.priceChange, marketData[coins.first!.id]?.priceChange)
-                XCTAssertNotNil(receivedCoins.first?.imageData)
+        XCTAssertFalse(viewModel.coins.isEmpty)
+        XCTAssertEqual(viewModel.coins.count, coins.count)
 
-                XCTAssertEqual(receivedCoins.last?.id, coins.last?.id)
-                XCTAssertEqual(receivedCoins.last?.name, coins.last?.name)
-                XCTAssertEqual(receivedCoins.last?.image, coins.last?.image)
-                XCTAssertEqual(receivedCoins.last?.rank, coins.last?.marketCapRank)
-                XCTAssertEqual(receivedCoins.last?.currentPrice, marketData[coins.last!.id]?.currentPrice)
-                XCTAssertEqual(receivedCoins.last?.priceChange, marketData[coins.last!.id]?.priceChange)
-                XCTAssertNotNil(receivedCoins.last?.imageData)
+        XCTAssertEqual(viewModel.coins.first?.id, coins.first?.id)
+        XCTAssertEqual(viewModel.coins.first?.name, coins.first?.name)
+        XCTAssertEqual(viewModel.coins.first?.imageURL, coins.first?.imageURL)
+        XCTAssertEqual(viewModel.coins.first?.rank, coins.first?.marketCapRank)
+        XCTAssertEqual(viewModel.coins.first?.currentPrice, marketData[coins.first!.id]?.currentPrice)
+        XCTAssertEqual(viewModel.coins.first?.priceChange, marketData[coins.first!.id]?.priceChange)
 
-                expectation.fulfill()
-            }
-            .store(in: &cancellables)
-
-        viewModel.fetchCoins()
-
-        wait(for: [expectation], timeout: 1)
-
-        XCTAssert(persistenceManager.fetchMethodCalled)
-        XCTAssertNil(viewModel.errorMessage)
+        XCTAssertEqual(viewModel.coins.last?.id, coins.last?.id)
+        XCTAssertEqual(viewModel.coins.last?.name, coins.last?.name)
+        XCTAssertEqual(viewModel.coins.last?.imageURL, coins.last?.imageURL)
+        XCTAssertEqual(viewModel.coins.last?.rank, coins.last?.marketCapRank)
+        XCTAssertEqual(viewModel.coins.last?.currentPrice, marketData[coins.last!.id]?.currentPrice)
+        XCTAssertEqual(viewModel.coins.last?.priceChange, marketData[coins.last!.id]?.priceChange)
     }
 
-    func testFetchCoinsEmptyResult() {
+    func testFetchCoinsEmptyResult() async throws {
         let coins: [Coin] = []
         let marketData = MarketData.mock
         coinScannerService.getMarketDataForCoinsResult = .success(marketData)
 
         for coin in coins {
-            let newCoin = CoinEntity(context: persistenceManager.context)
+            let newCoin = CoinData()
             newCoin.id = coin.id
             newCoin.name = coin.name
-            newCoin.image = coin.image
+            newCoin.imageURL = coin.imageURL
             newCoin.rank = coin.marketCapRank!
             newCoin.currentPrice = marketData[coin.id]!.currentPrice!
             newCoin.priceChange = marketData[coin.id]!.priceChange!
-
-            persistenceManager.fetchRequestResult.append(newCoin)
+            swiftDataManager.fetchResult.append(newCoin)
         }
 
-        let expectation = XCTestExpectation(description: "Fetch empty coins array")
-        viewModel.$coins
-            .dropFirst()
-            .sink { priceAlerts in
-                XCTAssert(priceAlerts.isEmpty)
-                expectation.fulfill()
-            }
-            .store(in: &cancellables)
+        await viewModel.fetchCoins()
 
-        viewModel.fetchCoins()
-
-        wait(for: [expectation], timeout: 1)
-
+        XCTAssertTrue(viewModel.coins.isEmpty)
         XCTAssertNil(viewModel.errorMessage)
     }
 
-    func testConstructCoin() {
+    func testConstructCoin() async throws {
         let coin: Coin = .btc
 
-        let expectation = XCTestExpectation(description: "Create new price alert")
-        viewModel.$coins
-            .dropFirst()
-            .sink { coins in
-                XCTAssertFalse(coins.isEmpty)
-                XCTAssertEqual(coins.count, 1)
+        await viewModel.createCoin(coin)
 
-                XCTAssertEqual(coins.first?.id, coin.id)
-                XCTAssertEqual(coins.first?.name, coin.name)
-                XCTAssertEqual(coins.first?.image, coin.image)
-                XCTAssertNotNil(coins.first?.imageData)
-                XCTAssertEqual(coins.first?.rank, coin.marketCapRank)
-                XCTAssertEqual(coins.first?.currentPrice, coin.currentPrice)
-                XCTAssertEqual(coins.first?.priceChange, coin.priceChangePercentage24H)
+        XCTAssertFalse(viewModel.coins.isEmpty)
+        XCTAssertEqual(viewModel.coins.count, 1)
 
-                expectation.fulfill()
-            }
-            .store(in: &cancellables)
+        XCTAssertEqual(viewModel.coins.first?.id, coin.id)
+        XCTAssertEqual(viewModel.coins.first?.name, coin.name)
+        XCTAssertEqual(viewModel.coins.first?.imageURL, coin.imageURL)
+        XCTAssertNotNil(viewModel.coins.first?.imageData)
+        XCTAssertEqual(viewModel.coins.first?.rank, coin.marketCapRank)
+        XCTAssertEqual(viewModel.coins.first?.currentPrice, coin.currentPrice)
+        XCTAssertEqual(viewModel.coins.first?.priceChange, coin.priceChangePercentage24H)
 
-        viewModel.createCoinEntity(coin)
-
-        wait(for: [expectation], timeout: 1)
-
-        XCTAssert(persistenceManager.saveMethodCalled)
+        XCTAssert(swiftDataManager.saveMethodCalled)
         XCTAssertNil(viewModel.errorMessage)
     }
 
-    func testSetPriceAlert() {
+    func testSetPriceAlert() async throws {
         let coin: Coin = .btc
-        
-        let newCoin = CoinEntity(context: persistenceManager.context)
+
+        let newCoin = CoinData()
         newCoin.id = coin.id
         newCoin.name = coin.name
-        newCoin.image = coin.image
+        newCoin.imageURL = coin.imageURL
         newCoin.rank = coin.marketCapRank!
         newCoin.currentPrice = coin.currentPrice!
         newCoin.priceChange = coin.priceChangePercentage24H!
 
         viewModel.coins.append(newCoin)
 
-        viewModel.setPriceAlert(for: newCoin, targetPrice: 30000)
+        await viewModel.setPriceAlert(for: newCoin, targetPrice: 30000)
 
         XCTAssertTrue(newCoin.isActive)
         XCTAssertEqual(newCoin.targetPrice, 30000)
 
-        viewModel.setPriceAlert(for: newCoin, targetPrice: nil)
+        await viewModel.setPriceAlert(for: newCoin, targetPrice: nil)
 
         XCTAssertFalse(newCoin.isActive)
         XCTAssertNil(newCoin.targetPrice)
     }
 
-    func testDeleteCoin() {
+    func testDeleteCoin() async throws {
         let coin = Coin.btc
         let marketData = MarketData.mock
 
-        let newCoin = CoinEntity(context: persistenceManager.context)
+        let newCoin = CoinData()
         newCoin.id = coin.id
         newCoin.name = coin.name
-        newCoin.image = coin.image
+        newCoin.imageURL = coin.imageURL
         newCoin.currentPrice = marketData[coin.id]!.currentPrice!
         newCoin.priceChange = marketData[coin.id]!.priceChange!
 
-        persistenceManager.save()
+        try swiftDataManager.save()
 
-        XCTAssert(persistenceManager.saveMethodCalled)
+        XCTAssert(swiftDataManager.saveMethodCalled)
 
-        viewModel.deleteCoin(newCoin)
+        await viewModel.deleteCoin(newCoin)
 
-        XCTAssert(persistenceManager.deleteMethodCalled)
-        XCTAssertEqual(persistenceManager.deletedObject, newCoin)
+        XCTAssert(swiftDataManager.deleteMethodCalled)
+        XCTAssertEqual(swiftDataManager.deletedModel as? CoinData, newCoin)
 
         XCTAssertNil(viewModel.errorMessage)
     }
