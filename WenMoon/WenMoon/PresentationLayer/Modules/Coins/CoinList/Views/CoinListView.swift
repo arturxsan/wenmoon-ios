@@ -19,38 +19,53 @@ struct CoinListView: View {
     @State private var showCoinSelectionView = false
     @State private var showAuthAlert = false
     
+    @State private var scrollText = false
+    
     // MARK: - Body
     var body: some View {
         BaseView(errorMessage: $viewModel.errorMessage) {
-            NavigationView {
-                List {
-                    ForEach(viewModel.coins, id: \.self) { coin in
-                        makeCoinView(coin)
-                    }
-                    .onMove(perform: moveCoin)
+            VStack {
+                HStack {
+                    Text(viewModel.globalCryptoMarketData)
+                        .font(.footnote)
                     
-                    Button(action: {
-                        showCoinSelectionView.toggle()
-                    }) {
-                        HStack {
-                            Image(systemName: "slider.horizontal.3")
-                            Text("Add Coins")
+                    Text(viewModel.globalMarketData)
+                        .font(.footnote)
+                }
+                .frame(width: 940, height: 20)
+                .offset(x: scrollText ? -680 : 680)
+                .animation(.linear(duration: 20).repeatForever(autoreverses: false), value: scrollText)
+                
+                NavigationView {
+                    List {
+                        ForEach(viewModel.coins, id: \.self) { coin in
+                            makeCoinView(coin)
                         }
-                        .frame(maxWidth: .infinity)
+                        .onMove(perform: moveCoin)
+                        
+                        Button(action: {
+                            showCoinSelectionView.toggle()
+                        }) {
+                            HStack {
+                                Image(systemName: "slider.horizontal.3")
+                                Text("Add Coins")
+                            }
+                            .frame(maxWidth: .infinity)
+                        }
+                        .listRowSeparator(.hidden)
+                        .buttonStyle(.borderless)
                     }
-                    .listRowSeparator(.hidden)
-                    .buttonStyle(.borderless)
-                }
-                .listStyle(.plain)
-                .environment(\.editMode, $isEditMode)
-                .animation(.default, value: viewModel.coins)
-                .refreshable {
-                    Task {
-                        await viewModel.fetchMarketData()
-                        await viewModel.fetchPriceAlerts()
+                    .listStyle(.plain)
+                    .environment(\.editMode, $isEditMode)
+                    .animation(.default, value: viewModel.coins)
+                    .refreshable {
+                        Task {
+                            await viewModel.fetchMarketData()
+                            await viewModel.fetchPriceAlerts()
+                        }
                     }
+                    .navigationTitle("Coins")
                 }
-                .navigationTitle("Coins")
             }
         }
         .fullScreenCover(isPresented: $showCoinSelectionView) {
@@ -84,6 +99,11 @@ struct CoinListView: View {
         .task {
             await viewModel.fetchCoins()
             await viewModel.fetchPriceAlerts()
+            await viewModel.fetchGlobalCryptoMarketData()
+            await viewModel.fetchGlobalMarketData()
+        }
+        .onAppear {
+            scrollText = true
         }
     }
     

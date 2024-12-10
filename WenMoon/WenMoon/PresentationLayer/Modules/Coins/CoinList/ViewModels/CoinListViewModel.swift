@@ -13,6 +13,8 @@ final class CoinListViewModel: BaseViewModel {
     @Published var coins: [CoinData] = []
     @Published var marketData: [String: MarketData] = [:]
     @Published var chartData: [String: [String: [ChartData]]] = [:]
+    @Published var globalCryptoMarketData = ""
+    @Published var globalMarketData = ""
     
     private let coinScannerService: CoinScannerService
     private let priceAlertService: PriceAlertService
@@ -184,13 +186,31 @@ final class CoinListViewModel: BaseViewModel {
         }
     }
     
-    func fetchChartData() async {
-        await withTaskGroup(of: Void.self) { group in
-            for coin in coins {
-                group.addTask { [weak self] in
-                    await self?.fetchChartData(for: coin.symbol)
-                }
-            }
+    @MainActor
+    func fetchGlobalCryptoMarketData() async {
+        do {
+            let globalCryptoMarketData = try await coinScannerService.getGlobalCryptoMarketData()
+            
+            let btcDominance = globalCryptoMarketData.marketCapPercentage["btc"] ?? .zero
+            let ethDominance = globalCryptoMarketData.marketCapPercentage["eth"] ?? .zero
+            let othersDominance = 100 - (btcDominance + ethDominance)
+            self.globalCryptoMarketData = "Crypto - BTC.D: \(btcDominance.formattedAsPercentage(includePlusSign: false)), ETH.D: \(ethDominance.formattedAsPercentage(includePlusSign: false)), OTHERS.D: \(othersDominance.formattedAsPercentage(includePlusSign: false))"
+        } catch {
+            setErrorMessage(error)
+        }
+    }
+    
+    @MainActor
+    func fetchGlobalMarketData() async {
+        do {
+            let globalMarketData = try await coinScannerService.getGlobalMarketData()
+            let currentCPI = globalMarketData.currentCPIPercentage.formattedAsPercentage(includePlusSign: false)
+            let nextCPIDate = globalMarketData.nextCPIDate.formatted(as: .dateOnly)
+            let currentInterestRate = globalMarketData.currentInterestRatePercentage.formattedAsPercentage(includePlusSign: false)
+            let nextFOMCMeetingDate = globalMarketData.nextFOMCMeetingDate.formatted(as: .dateOnly)
+            self.globalMarketData = "Global - CPI: \(currentCPI), Next CPI: \(nextCPIDate), Interest Rate: \(currentInterestRate), Next FOMC: \(nextFOMCMeetingDate)"
+        } catch {
+            setErrorMessage(error)
         }
     }
     
